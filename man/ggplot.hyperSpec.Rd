@@ -29,6 +29,10 @@ parameters. Otherwise standard \pkg{ggplot2}  functions, such as
 
 \item{...}{further arguments to be passed to function
 \code{\link[ggplot2]{ggplot}}.}
+
+\item{format}{A string with format to be passed to \code{\link[base]{sprintf}}.
+This string is used to format text in labels of wavelength intervals, when
+\code{wl.range} is specified. Default format is \code{'\%g'}.}
 }
 \value{
 A \code{\link[ggplot2]{ggplot}} object.

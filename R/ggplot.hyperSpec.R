@@ -21,6 +21,11 @@
 #'            \code{\link[ggplot2]{ggplot}}.
 #'
 #' @param palette [Expreimental!!!] Color palete for \code{color} and \code{fill}.
+#'
+#' @param format A string with format to be passed to \code{\link[base]{sprintf}}.
+#' This string is used to format text in labels of wavelength intervals, when
+#' \code{wl.range} is specified. Default format is \code{'\%g'}.
+#'
 #' @inheritParams ggplot2::ggplot
 #'
 #'
@@ -39,6 +44,7 @@
 #' @family \pkg{spPlot} functions for spectroscopy and \pkg{hyperSpec}
 #' @family \pkg{spPlot} functions for \pkg{ggplot2}
 #'
+#' @importFrom ggplot2 ggplot
 #' @examples
 #' library(spPlot)
 #' data(Spectra2)
