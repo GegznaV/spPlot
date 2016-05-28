@@ -34,5 +34,5 @@ install_github("GegznaV/spPlot")
 ------------------------------------------------------------------------
 
 <p align="right">
-File updated on <b>2016-05-29</b> with version of package <b>0.1.1</b>
+File updated on <b>2016-05-29</b> with version of package <b>0.1.2</b>
 </p>
