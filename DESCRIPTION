@@ -1,0 +1,58 @@
+Package: spPlot
+Type: Package
+Title: Plots Including Extensions for `hyperSpec`, `ggplot2` and `plotly`.
+Description: Various plotting functions, convenience plotting functions and
+             extesions for packages `hyperSpec`, `ggplot2` and `plotly`.
+Version: 0.1.001
+Date: 2016-05-28
+Encoding: UTF-8
+Authors@R: person("Vilmantas", "Gegzna", email = "GegznaV@gmail.com", role = c("aut", "cre"))
+Maintainer: Vilmantas Gegzna <GegeznaV@gmail.com>
+License: GPL (>= 3)
+LazyData: yes
+LazyLoad: yes
+RoxygenNote: 5.0.1
+VignetteBuilder: knitr
+Depends:
+    R (>= 3.2),
+    magrittr,
+    ggplot2,
+    spHelper
+Imports:
+    ROCR,
+    hyperSpec,
+    grDevices,
+    plotly,
+    ggspectra,
+    htmltools,
+    prospectr,
+    chemometrics,
+    compositions,
+    ChemometricsWithR,
+    photobiology,
+    photobiologyWavebands,
+    resemble,
+    reshape2,
+    pander,
+    dplyr,
+    tidyr,
+    MASS,
+    devtools,
+    pkgmaker,
+    psych,
+    scales,
+    cowplot,
+    rstudioapi,
+    RColorBrewer,
+    graphics,
+    alsace,
+    ALS,
+    lubridate,
+    simsalapar
+Suggests:
+    knitr,
+    rmarkdown,
+    lattice,
+    latticeExtra,
+    mvbutils,
+    sna
