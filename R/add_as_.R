@@ -3,8 +3,8 @@
 #' @name add_as_
 #' @aliases add_as_is
 #' @aliases add_as_text
-#' @aliases add_as_section
-#' @aliases add_as_plotly
+#'
+#' @aliases add_as_plotly_widget
 #' @aliases add_as_pander
 #' @aliases add_as_is
 #'
@@ -13,6 +13,8 @@
 #' @description Functions to transform and add objects to \code{knitr_container}.
 #' Objects, that can be included in R \code{\link[base]{list}}, can also be
 #' included in \code{knitr_container}.
+#'
+#' \code{\link{add_as_section}()} subfamily functions have separate description page.
 #'
 #' @details
 #'
@@ -31,11 +33,11 @@
 #'  formats as \bold{text} and includes it in the \code{container}. Function
 #'  \code{print_objects} will print it as text.
 #'
-#' \code{add_as_section()} converts \code{obj} to \code{\link[base]{character}},
-#'  formats it as a \bold{header of section} and includes it in the \code{container}.
+#' \code{\link{add_as_section}()} converts \code{obj} to \code{\link[base]{character}},
+#'  formats it as a \bold{heading of section} and includes it in the \code{container}.
 #'  Function \code{print_objects} will print it as text.
 #'
-#' \code{add_as_plotly()} converts \pkg{plotly} and \pkg{ggplot2} objects to
+#' \code{add_as_plotly_widget()} converts \pkg{plotly} and \pkg{ggplot2} objects to
 #' plotly htmlwidget (details in \code{\link[plotly]{as.widget}}) and includes
 #' it in the \code{container}. Function \code{print_objects} will print it as
 #' plotly htmlwidget and attach
@@ -49,12 +51,10 @@
 #'
 #' @template container
 #' @template obj
-#' @param level The level of header/section to be added. Default is 1
-#'        (top level section).
+#'
 #' @export
 #'
 #' @examples
-#'
 #' # Find examples in link `knitr_container-class`
 #'
 #' @author Vilmantas Gegzna
@@ -91,23 +91,11 @@ add_as_text <- function(container = NULL, obj){
     return(container)
 }
 
-#' @rdname add_as_
-#' @export
-add_as_section <- function(container = NULL, obj = "", level = 1){
-    container <- as.knitr_container(container)
-
-    obj <- sprintf("\n\n%s %s\n\n  ",
-                   paste0(rep("#",level), collapse = ""), #line adds required number of symbols (#)
-                   as.character(obj))
-    obj <- added_as(obj, "Section")
-    container <- add_as_is(container, obj)
-    return(container)
-}
-
+#  ------------------------------------------------------------------------
 
 #' @rdname add_as_
 #' @export
-add_as_plotly <- function(container = NULL, obj){
+add_as_plotly_widget <- function(container = NULL, obj){
     container <- as.knitr_container(container)
 
     obj <- plotly::as.widget(obj)

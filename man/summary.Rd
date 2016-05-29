@@ -34,7 +34,7 @@ Vilmantas Gegzna
 }
 \seealso{
 Other \code{knitr_container} functions: \code{\link{Join}},
-  \code{\link{add_as_}},
+  \code{\link{add_as_section}}, \code{\link{add_as_}},
   \code{\link{knitr_container-class}},
   \code{\link{knitr_container}},
   \code{\link{print_objects}}, \code{\link{print}}

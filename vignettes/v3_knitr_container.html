@@ -118,10 +118,10 @@ obj
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">obj &lt;-<span class="st"> </span><span class="kw">add_as_section</span>(obj, <span class="st">&quot;Plots&quot;</span>)
 
 obj &lt;-<span class="st"> </span><span class="kw">add_as_section</span>(obj, <span class="st">&quot;Add `plotly`&quot;</span>, <span class="dt">level =</span> <span class="dv">2</span>)
-obj &lt;-<span class="st"> </span><span class="kw">add_as_plotly</span>(obj, plotly_obj)
+obj &lt;-<span class="st"> </span><span class="kw">add_as_plotly_widget</span>(obj, plotly_obj)
 
 obj &lt;-<span class="st"> </span><span class="kw">add_as_section</span>(obj, <span class="st">&quot;Add `ggplot` as `plotly`&quot;</span>, <span class="dt">level =</span> <span class="dv">2</span>)
-obj &lt;-<span class="st"> </span><span class="kw">add_as_plotly</span>(obj, ggplot_obj)
+obj &lt;-<span class="st"> </span><span class="kw">add_as_plotly_widget</span>(obj, ggplot_obj)
 
 obj &lt;-<span class="st"> </span><span class="kw">add_as_section</span>(obj, <span class="st">&quot;Add `ggplot`&quot;</span>, <span class="dt">level =</span> <span class="dv">2</span>)
 obj &lt;-<span class="st"> </span><span class="kw">add_as_is</span>(obj, ggplot_obj)
@@ -130,7 +130,7 @@ obj &lt;-<span class="st"> </span><span class="kw">add_as_section</span>(obj, <s
 obj &lt;-<span class="st"> </span><span class="kw">add_as_is</span>(obj, plotly_obj)
 obj &lt;-<span class="st"> </span><span class="kw">add_as_text</span>(obj, <span class="kw">paste</span>(<span class="st">&quot;As you noticed, the last&quot;</span>,
       <span class="st">&quot;`plotly` object was not plotted as it was added with &quot;</span>,
-      <span class="st">&quot;`add_as_is()` and not with `add_as_plotly()`&quot;</span>))
+      <span class="st">&quot;`add_as_is()` and not with `add_as_plotly_widget()`&quot;</span>))
 
 
 obj &lt;-<span class="st"> </span><span class="kw">add_as_section</span>(obj, <span class="st">&quot;Pander and text&quot;</span>, <span class="dt">level =</span> <span class="dv">1</span>)
@@ -225,7 +225,7 @@ obj &lt;-<span class="st"> </span><span class="kw">add_as_is</span>(obj, <span c
 <span class="co">#&gt; 1 As is         11.1 Kb gg, ggplot                          </span>
 <span class="co">#&gt; 2 As is         22.2 Kb plotly_hash, tbl_df, tbl, data.frame</span>
 <span class="co">#&gt; ==========================================================================================</span></code></pre></div>
-<p>In these situations it is better to apply function <code>add_as_plotly</code> first.</p>
+<p>In these situations it is better to apply function <code>add_as_plotly_widget</code> first.</p>
 </div>
 <div id="print-objects-from-the-container-print_objects" class="section level1">
 <h1><span class="header-section-number">3</span> Print objects from the container (<code>print_objects</code>)</h1>
@@ -257,7 +257,7 @@ obj &lt;-<span class="st"> </span><span class="kw">add_as_is</span>(obj, <span c
 </div>
 <div id="attention-not-plotted" class="section level1">
 <h1><span class="header-section-number">5</span> Attention: Not Plotted</h1>
-<p>As you noticed, the last <code>plotly</code> object was not plotted as it was added with <code>add_as_is()</code> and not with <code>add_as_plotly()</code></p>
+<p>As you noticed, the last <code>plotly</code> object was not plotted as it was added with <code>add_as_is()</code> and not with <code>add_as_plotly_widget()</code></p>
 </div>
 <div id="pander-and-text" class="section level1">
 <h1><span class="header-section-number">6</span> Pander and text</h1>

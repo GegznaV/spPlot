@@ -3,7 +3,7 @@ Type: Package
 Title: Plots and Extensions for `hyperSpec`, `ggplot2` and `plotly`.
 Description: Various plotting functions, convenience plotting functions and
              extesions for packages `hyperSpec`, `ggplot2` and `plotly`.
-Version: 0.1.003
+Version: 0.1.004
 Date: 2016-05-29
 Encoding: UTF-8
 Authors@R: person("Vilmantas", "Gegzna", email = "GegznaV@gmail.com", role = c("aut", "cre"))
@@ -15,44 +15,37 @@ RoxygenNote: 5.0.1
 VignetteBuilder: knitr
 Depends:
     R (>= 3.2),
-    magrittr,
-    ggplot2
+    ggplot2,
+    magrittr
 Imports:
     spHelper,
-    ROCR,
-    hyperSpec,
-    grDevices,
     plotly,
-    ggspectra,
-    htmltools,
-    prospectr,
+    ChemometricsWithR,
+    MASS,
+    RColorBrewer,
     chemometrics,
     compositions,
-    ChemometricsWithR,
+    cowplot,
+    devtools,
+    dplyr,
+    ggspectra,
+    grDevices,
+    graphics,
+    htmltools,
+    hyperSpec,
+    lubridate,
+    pander,
     photobiology,
     photobiologyWavebands,
+    pkgmaker,
+    prospectr,
+    psych,
     resemble,
     reshape2,
-    pander,
-    dplyr,
-    tidyr,
-    MASS,
-    devtools,
-    pkgmaker,
-    psych,
-    scales,
-    cowplot,
     rstudioapi,
-    RColorBrewer,
-    graphics,
-    alsace,
-    ALS,
-    lubridate,
-    simsalapar
+    scales,
+    simsalapar,
+    tidyr
 Suggests:
     knitr,
-    rmarkdown,
-    lattice,
-    latticeExtra,
-    mvbutils,
-    sna
+    rmarkdown

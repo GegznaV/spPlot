@@ -11,7 +11,7 @@ output:
 vignette: >
   %\VignetteIndexEntry{3 plotly and knitr Examples}
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteDepends{plotly}
+  %\VignetteDepends{plotly,spHelper}
   %\VignetteEncoding{UTF-8}
 ---
 ```{r options1, echo = FALSE, message = FALSE, warning = FALSE}
@@ -54,10 +54,10 @@ Attach objects to the end of the container.
 obj <- add_as_section(obj, "Plots")
 
 obj <- add_as_section(obj, "Add `plotly`", level = 2)
-obj <- add_as_plotly(obj, plotly_obj)
+obj <- add_as_plotly_widget(obj, plotly_obj)
 
 obj <- add_as_section(obj, "Add `ggplot` as `plotly`", level = 2)
-obj <- add_as_plotly(obj, ggplot_obj)
+obj <- add_as_plotly_widget(obj, ggplot_obj)
 
 obj <- add_as_section(obj, "Add `ggplot`", level = 2)
 obj <- add_as_is(obj, ggplot_obj)
@@ -66,7 +66,7 @@ obj <- add_as_section(obj, "Attention: Not Plotted", level = 1)
 obj <- add_as_is(obj, plotly_obj)
 obj <- add_as_text(obj, paste("As you noticed, the last",
       "`plotly` object was not plotted as it was added with ",
-      "`add_as_is()` and not with `add_as_plotly()`"))
+      "`add_as_is()` and not with `add_as_plotly_widget()`"))
 
 
 obj <- add_as_section(obj, "Pander and text", level = 1)
@@ -117,7 +117,7 @@ As function uses method "as is" to convert to `knitr_container`,
 ```{r}
 Join(ggplot_obj, plotly_obj)
 ```
-In these situations it is better to apply function `add_as_plotly` first.
+In these situations it is better to apply function `add_as_plotly_widget` first.
 
 
 

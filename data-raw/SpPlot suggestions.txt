@@ -1,0 +1,105 @@
+==========================================================================
+Ideas
+--------------------------------------------------------------------------
+[v] add_as_section
+[v] add_as_subsection
+
+[v] add_as_heading_1
+[v] add_as_heading_2
+[v] add_as_heading_3
+[v] add_as_heading_4
+
+[x] add_as_sub3section
+[x] add_as_subsection2
+[x] add_as_subsection3
+--------------------------------------------------------------------------
+[.] add_as_section: if iput - several lines, collapse it
+--------------------------------------------------------------------------
+[.] add_as_section: added_as    Section -> Heading
+--------------------------------------------------------------------------
+[ ]
+[ ]
+[ ]
+[ ]
+[ ]
+[ ]
+[ ]
+[ ]
+[ ]
+[ ]
+
+
+==========================================================================
+FOR DOCUMENTATION
+--------------------------------------------------------------------------
+#' @author Vilmantas Gegzna
+
+#' @import hyperSpec
+#' @import ggplot2
+#' @import hyperSpec
+#' @import spHelper
+#' @import spMisc
+
+#' @family \pkg{spPlot} functions for \pkg{ggplot2}
+#' @family \pkg{spPlot} functions for \pkg{plotly}
+#' @family \pkg{spPlot} functions for \pkg{hyperSpec}
+#' @family \pkg{spPlot} functions for spectroscopy and \pkg{hyperSpec}
+
+#' @family \pkg{spPlot} \code{clear} family functions
+#' @family \pkg{spPlot} fold creation functions
+#' @family \pkg{spPlot} utilities
+#' @family \pkg{spPlot} plots
+
+#' @family  RStudio addins in \pkg{spPlot}
+
+#' @family component analysis / factorisation related functions in \pkg{spPlot} 
+#' @family matrix operations in \pkg{spPlot} 
+#' @family simmulation functions in \pkg{spPlot} 
+#' @family curves in \pkg{spPlot} 
+#' @family row-wise transformations
+
+#' @family methods for \code{\link[=hyperSpec-class]{hyperSpec}} in \pkg{spPlot}
+#' @family \pkg{prospectr} function for \pkg{hyperSpec}
+#' \donttest{
+#' \dontrun{
+
+#' @family SOM and hexagon related functions in \pkg{spPlot} 
+#' @author Vilmantas Gegzna
+
+
+
+#' @author Vilmantas Gegzna
+#' @family \code{knitr_container} functions
+
+#' @author Ignas Ciplys
+#' @family functions by Ignas Ciplys
+
+\code{\link[=hyperSpec-class]{hyperSpec}}
+
+--------------------------------------------
+https://gist.github.com/hadley/5576263
+papraðyt, kad debugintø per "stack overflow"
+
+
+
+
+expression(list(lambda, nm))
+
+
+
+interval_cut -> interval_analysed
+medFilt_k
+
+lowest_intensity -> low_intensity_limit
+medFilt_k -> filtMedian_k
+sgFilt_   -> filtSG_
+
+interval_background -> rm_yoffset_interval
+
+
+
+http://stackoverflow.com/a/28370943/4783029
+
+
+
+

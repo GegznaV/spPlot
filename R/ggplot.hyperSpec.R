@@ -115,11 +115,13 @@ ggplot.hyperSpec <- function (obj, mapping = aes(), wl.range = NULL,
     }
 
     # Make ggplot
-    p <- ggplot(DF, mapping = mapping)
-    # p <- ggplot(DF, mapping = mapping, ...)
+    p <- ggplot2::ggplot(DF, mapping = mapping)
+    # p <- ggplot2::ggplot(DF, mapping = mapping, ...)
 
     # Modify x and y axis labels in ggplot
-    p <- p + xlab(labels(obj, ".wavelength")) + ylab(labels(obj, "spc"))
+    p <- p +
+          xlab(hyperSpec::labels(obj, ".wavelength")) +
+          ylab(hyperSpec::labels(obj, "spc"))
 
     # Use facetting if two or more wl.ranges are selected
     if (!is.null(wl.range) & length(wl.range) > 1) {
@@ -146,7 +148,7 @@ ggplot.hyperSpec <- function (obj, mapping = aes(), wl.range = NULL,
 # obj - hyperSpec object
 as_longDF_and_rm_NA <- function(obj) {
     # Convert to long data frame format:
-    df <- as.long.df(obj, rownames = TRUE, na.rm = FALSE)
+    df <- hyperSpec::as.long.df(obj, rownames = TRUE, na.rm = FALSE)
     # Remove NA values:
     df <- df[!is.na(df$spc), , drop = FALSE]
     return(df)

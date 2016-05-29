@@ -23,10 +23,10 @@ obj
 obj <- add_as_section(obj, "Plots")
 
 obj <- add_as_section(obj, "Add `plotly`", level = 2)
-obj <- add_as_plotly(obj, plotly_obj)
+obj <- add_as_plotly_widget(obj, plotly_obj)
 
 obj <- add_as_section(obj, "Add `ggplot` as `plotly`", level = 2)
-obj <- add_as_plotly(obj, ggplot_obj)
+obj <- add_as_plotly_widget(obj, ggplot_obj)
 
 obj <- add_as_section(obj, "Add `ggplot`", level = 2)
 obj <- add_as_is(obj, ggplot_obj)
@@ -35,7 +35,7 @@ obj <- add_as_section(obj, "Attention: Not Plotted", level = 1)
 obj <- add_as_is(obj, plotly_obj)
 obj <- add_as_text(obj, paste("As you noticed, the last",
       "`plotly` object was not plotted as it was added with ",
-      "`add_as_is()` and not with `add_as_plotly()`"))
+      "`add_as_is()` and not with `add_as_plotly_widget()`"))
 
 
 obj <- add_as_section(obj, "Pander and text", level = 1)

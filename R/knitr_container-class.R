@@ -39,10 +39,10 @@
 #' container <- add_as_section(container, "Plots")
 #'
 #' container <- add_as_section(container, "Add plotly", level = 2)
-#' container <- add_as_plotly(container, plotly_obj)
+#' container <- add_as_plotly_widget(container, plotly_obj)
 #'
 #' container <- add_as_section(container, "Add ggplot as plotly", level = 2)
-#' container <- add_as_plotly(container, ggplot_obj)
+#' container <- add_as_plotly_widget(container, ggplot_obj)
 #'
 #' container <- add_as_section(container, "Add ggplot", level = 2)
 #' container <- add_as_is(container, ggplot_obj)
