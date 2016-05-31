@@ -17,10 +17,13 @@ Ideas
 --------------------------------------------------------------------------
 [.] add_as_section: added_as    Section -> Heading
 --------------------------------------------------------------------------
-[ ]
-[ ]
-[ ]
-[ ]
+[ ] print_objects: format_and_print    ("ggplot" and "plotly_*" convert to "htmlwidget")
+[ ] print_objects: extract_and_print   (rename?)
+---------------------------------------------------------------------------
+[ ] print only first 20 rows.
+[ ] select, which rows to print/summarize
+---------------------------------------------------------------------------
+[ ] *** Only the first 100 lines are displayed! ***  ->  xxx were not displayed
 [ ]
 [ ]
 [ ]
