@@ -5,8 +5,8 @@
 
 [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spPlot.png?branch=master)](https://travis-ci.org/GegznaV/spPlot)
 
-Developement version of package `spPlot`
-========================================
+Development version of package `spPlot`
+=======================================
 
 **Package is under construction.**
 
@@ -34,5 +34,5 @@ install_github("GegznaV/spPlot")
 ------------------------------------------------------------------------
 
 <p align="right">
-File updated on <b>2016-05-29</b> with version of package <b>0.1.4</b>
+File updated on <b>2016-06-03</b> with version of package <b>0.1.5</b>
 </p>

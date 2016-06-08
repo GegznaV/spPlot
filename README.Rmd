@@ -30,7 +30,7 @@ knitr::opts_chunk$set(
 
 
   
-Developement version of package `spPlot` 
+Development version of package `spPlot` 
 ==========================================
 
 

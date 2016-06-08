@@ -46,6 +46,9 @@ Imports:
     scales,
     simsalapar,
     tidyr
+Remotes:
+    github::GegznaV/spHelper
 Suggests:
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat

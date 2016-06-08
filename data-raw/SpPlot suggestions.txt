@@ -20,17 +20,25 @@ Ideas
 [ ] print_objects: format_and_print    ("ggplot" and "plotly_*" convert to "htmlwidget")
 [ ] print_objects: extract_and_print   (rename?)
 ---------------------------------------------------------------------------
-[ ] print only first 20 rows.
+[+] print only first 30 rows.
 [ ] select, which rows to print/summarize
 ---------------------------------------------------------------------------
-[ ] *** Only the first 100 lines are displayed! ***  ->  xxx were not displayed
-[ ]
+[ ] *** Only the first 100 lines are displayed! ***  -> 
+                      xxx were not displayed
+[+] Remove attribute (added_as == As is) while printing
 [ ]
 [ ]
 [ ]
 [ ]
 [ ]
 
+==========================================================================
+[ ]qplot_crosstab <- UseMethod: 
+[ ]			matrix
+[ ]			table
+[ ]			padaryti 2 vektoriams,
+[ ] 		hyperSpec ir 
+[ ] 		data.frame objektams
 
 ==========================================================================
 FOR DOCUMENTATION
@@ -103,6 +111,10 @@ interval_background -> rm_yoffset_interval
 
 http://stackoverflow.com/a/28370943/4783029
 
+============================================================================
+BADGES
+============================================================================
+[![CRAN downloads](http://cranlogs.r-pkg.org/badges/grand-total/spAddins)](https://cran.r-project.org/package=spAddins)
 
 
 
