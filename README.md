@@ -1,14 +1,12 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![CRAN version](http://www.r-pkg.org/badges/version/spPlot)](http://cran.rstudio.com/web/packages/spPlot/index.html) [![CRAN mirror downloads](http://cranlogs.r-pkg.org/badges/spPlot)](http://cran.rstudio.com/web/packages/spPlot/index.html) [![Issue Stats](http://issuestats.com/github/GegznaV/spPlot/badge/pr?style=flat)](http://issuestats.com/github/GegznaV/spPlot) [![Issue Stats](http://issuestats.com/github/GegznaV/spPlot/badge/issue?style=flat)](http://issuestats.com/github/GegznaV/spPlot)
-
-[![codecov.io](https://codecov.io/github/GegznaV/spPlot/coverage.svg?branch=master)](https://codecov.io/github/GegznaV/spPlot?branch=master)
-
-[![Travis-CI Build Status](https://travis-ci.org/GegznaV/spPlot.png?branch=master)](https://travis-ci.org/GegznaV/spPlot)
+[![CRAN version](http://www.r-pkg.org/badges/version/spPlot)](http://cran.rstudio.com/web/packages/spPlot/index.html)
+[![GitHub version](https://img.shields.io/badge/GitHub-v0.0.5-brightgreen.svg)](https://github.com/GegznaV/spPlot) [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spPlot.png?branch=master)](https://travis-ci.org/GegznaV/spPlot) [![codecov.io](https://codecov.io/github/GegznaV/spPlot/coverage.svg?branch=master)](https://codecov.io/github/GegznaV/spPlot?branch=master)
 
 Development version of package `spPlot`
 =======================================
 
-**Package is under construction.**
+**The package is under construction.**
 
 Some functions may be changed significantly.
 
@@ -34,5 +32,5 @@ install_github("GegznaV/spPlot")
 ------------------------------------------------------------------------
 
 <p align="right">
-File updated on <b>2016-06-03</b> with version of package <b>0.1.5</b>
+File updated on <b>2016-06-14</b> with version of package <b>0.0.5</b>
 </p>

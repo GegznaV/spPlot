@@ -1,14 +1,6 @@
 ---
-output:
-  md_document:
-    variant: markdown_github
+output: github_document
 ---
-```{r}
-
-```
-
-
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
  
 ```{r, echo = FALSE}
@@ -19,14 +11,10 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![CRAN version](http://www.r-pkg.org/badges/version/spPlot)](http://cran.rstudio.com/web/packages/spPlot/index.html)
-[![CRAN mirror downloads](http://cranlogs.r-pkg.org/badges/spPlot)](http://cran.rstudio.com/web/packages/spPlot/index.html)
-[![Issue Stats](http://issuestats.com/github/GegznaV/spPlot/badge/pr?style=flat)](http://issuestats.com/github/GegznaV/spPlot)
-[![Issue Stats](http://issuestats.com/github/GegznaV/spPlot/badge/issue?style=flat)](http://issuestats.com/github/GegznaV/spPlot)
-
-[![codecov.io](https://codecov.io/github/GegznaV/spPlot/coverage.svg?branch=master)](https://codecov.io/github/GegznaV/spPlot?branch=master)
-
+[![CRAN version](http://www.r-pkg.org/badges/version/spPlot)](http://cran.rstudio.com/web/packages/spPlot/index.html)  
+[![GitHub version](https://img.shields.io/badge/GitHub-v`r packageVersion("spPlot")`-brightgreen.svg)](https://github.com/GegznaV/spPlot)
 [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spPlot.png?branch=master)](https://travis-ci.org/GegznaV/spPlot)
+[![codecov.io](https://codecov.io/github/GegznaV/spPlot/coverage.svg?branch=master)](https://codecov.io/github/GegznaV/spPlot?branch=master)
 
 
   
@@ -34,7 +22,7 @@ Development version of package `spPlot`
 ==========================================
 
 
-**Package is under construction.**
+**The package is under construction.**
 
 Some functions may be changed significantly.
 
