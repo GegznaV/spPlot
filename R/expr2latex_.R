@@ -23,6 +23,7 @@
 #'
 #' library(spPlot)
 #' library(simsalapar)
+#' library(hyperSpec)
 #'
 #' expr2latex_(quote(N[sim]))
 #'

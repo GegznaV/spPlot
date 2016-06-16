@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 
 [![CRAN version](http://www.r-pkg.org/badges/version/spPlot)](http://cran.rstudio.com/web/packages/spPlot/index.html)  
 [![GitHub version](https://img.shields.io/badge/GitHub-v`r packageVersion("spPlot")`-brightgreen.svg)](https://github.com/GegznaV/spPlot)
-[![Travis-CI Build Status](https://travis-ci.org/GegznaV/spPlot.png?branch=master)](https://travis-ci.org/GegznaV/spPlot)
+[![Travis-CI Build Status](https://travis-ci.org/GegznaV/spPlot.svg?branch=master)](https://travis-ci.org/GegznaV/spPlot)
 [![codecov.io](https://codecov.io/github/GegznaV/spPlot/coverage.svg?branch=master)](https://codecov.io/github/GegznaV/spPlot?branch=master)
 
 

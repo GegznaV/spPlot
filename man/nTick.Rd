@@ -28,6 +28,7 @@ Convenience function to control number of ticks in \code{ggplot2}
  plots with continuous scale.
 }
 \examples{
+library(spHelper)
 
 library(spPlot)
 library(ggplot2)

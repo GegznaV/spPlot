@@ -8,7 +8,15 @@
 #' [!] - a description is incomplete and needs revision.\cr\cr
 #'
 #' @author Vilmantas Gegzna
-#'
+#' @import plotly
+#' @import spHelper
+#' @import magrittr
+#' @import hyperSpec
+#' @importFrom methods validObject
+#' @importFrom stats as.formula setNames family
+#' @importFrom utils modifyList data
+#' @importFrom graphics legend text title
+
 
 #'
 NULL

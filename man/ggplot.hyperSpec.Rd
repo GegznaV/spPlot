@@ -44,6 +44,7 @@ More details in \code{\link[ggplot2]{ggplot}}.
 }
 \examples{
 library(spPlot)
+library(spHelper)
 data(Spectra2)
 
 ggplot(Spectra2) + geom_line()

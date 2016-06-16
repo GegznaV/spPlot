@@ -3,8 +3,8 @@ Type: Package
 Title: Plots and Extensions for `hyperSpec`, `ggplot2` and `plotly`
 Description: Various plotting functions, convenience plotting functions and
              extesions for packages `hyperSpec`, `ggplot2` and `plotly`.
-Version: 0.0.005
-Date: 2016-05-29
+Version: 0.0.006
+Date: 2016-06-16
 Encoding: UTF-8
 Authors@R: person("Vilmantas", "Gegzna", email = "GegznaV@gmail.com", role = c("aut", "cre"))
 Maintainer: Vilmantas Gegzna <GegeznaV@gmail.com>
@@ -13,11 +13,15 @@ LazyData: yes
 LazyLoad: yes
 RoxygenNote: 5.0.1
 VignetteBuilder: knitr
+Remotes:
+    github::GegznaV/spHelper
 Depends:
     R (>= 3.2),
     ggplot2,
+    hyperSpec,
     magrittr
 Imports:
+    methods,
     spHelper,
     plotly,
     ChemometricsWithR,
@@ -32,7 +36,6 @@ Imports:
     grDevices,
     graphics,
     htmltools,
-    hyperSpec,
     lubridate,
     pander,
     photobiology,
@@ -46,8 +49,6 @@ Imports:
     scales,
     simsalapar,
     tidyr
-Remotes:
-    github::GegznaV/spHelper
 Suggests:
     knitr,
     rmarkdown,

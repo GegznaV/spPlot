@@ -18,6 +18,7 @@
 #'
 #' @examples
 #' library(spPlot)
+#' library(plotly)
 #'
 #' # Create plotly object 'obj':
 #' iris$Species2 <- sample(iris$Species)

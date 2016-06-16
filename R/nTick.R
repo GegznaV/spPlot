@@ -22,6 +22,7 @@
 #' @export
 #' @seealso Pretty breakpoints: \code{\link[base]{pretty}}.
 #' @examples
+#' library(spHelper)
 #'
 #' library(spPlot)
 #' library(ggplot2)
