@@ -73,7 +73,7 @@ plotly_modify_hover <- function(obj, new_text = list(),
     obj <- plotly::plotly_build(obj)
 
     # Length of data list
-    LEN <- length(obj$data)
+    LEN <- length(obj$x$data)
 
     # Remove repeated text in hower and update contents.
     if (!is.null(new_text)){
@@ -81,17 +81,17 @@ plotly_modify_hover <- function(obj, new_text = list(),
 
         # Apply the function
         for (i in 1:LEN) {
-            obj$data[[i]]$text %<>% update_text(replace_with = new_text)
+            obj$x$data[[i]]$text %<>% update_text(replace_with = new_text)
         }
     }
     return(obj)
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    if (!is.null(hovermode)){obj$x$layout$hovermode <- hovermode}
 
-    if (!is.null(hovermode)){obj$layout$hovermode <- hovermode}
-
-    # obj$data[[1]]$hoverinfo
+    # obj$x$data[[1]]$hoverinfo
     # [1] "text"
 
-    # obj$layout$xaxis$hoverformat
+    # obj$x$layout$xaxis$hoverformat
     # [1] ".2f"
 }
 

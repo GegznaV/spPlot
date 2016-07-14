@@ -46,8 +46,8 @@
 
 plotly_annotation_rm <- function(obj, which = NULL){
     obj <- plotly::plotly_build(obj)
-    if(is.null(which))  obj$layout$annotations <- list()
-    else obj$layout$annotations[which] <- NULL
+    if(is.null(which))  obj$x$layout$annotations <- list()
+    else obj$x$layout$annotations[which] <- NULL
     return(obj)
 }
 
@@ -55,8 +55,8 @@ plotly_annotation_rm <- function(obj, which = NULL){
 #' @rdname plotly_annotation_rm
 plotly_annotation_list <- function(obj, which = NULL){
     obj <- plotly::plotly_build(obj)
-    if(is.null(which))  ann <- obj$layout$annotations
-    else                ann <- obj$layout$annotations[which]
+    if(is.null(which))  ann <- obj$x$layout$annotations
+    else                ann <- obj$x$layout$annotations[which]
     return(ann)
 }
 
@@ -64,12 +64,12 @@ plotly_annotation_list <- function(obj, which = NULL){
 #' @rdname plotly_annotation_rm
 plotly_annotation_n <- function(obj){
     obj <- plotly::plotly_build(obj)
-    return(length(obj$layout$annotations))
+    return(length(obj$x$layout$annotations))
 }
 #' @export
 #' @rdname plotly_annotation_rm
 plotly_annotation_text <- function(obj){
     obj <- plotly::plotly_build(obj)
-    lapply(obj$layout$annotations, function(x) x$text)
+    lapply(obj$x$layout$annotations, function(x) x$text)
 }
 # obj$layout$showlegend

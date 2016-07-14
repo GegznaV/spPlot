@@ -45,6 +45,7 @@
 #' chondro[1:10,,]  %>% qplotspc %>%  ggplotly %>% plotly_build %>% label_expr2text
 #'
 #' # ==========================================================================
+#' @importFrom simsalapar expr2latex
 
 label_expr2text <- function(obj, FUN = expr2latex_, ...){
     UseMethod("label_expr2text")
@@ -75,27 +76,35 @@ label_expr2text.hyperSpec <- function(obj, FUN = expr2latex_, ...) {
 #' @method label_expr2text plotly_hash
 #'
 label_expr2text.plotly_hash <- function(obj, FUN = expr2latex_, ...){
+    .Deprecated("label_expr2text.plotly")
     obj <- plotly::plotly_build(obj)  %>%  label_expr2text(., FUN, ...)
     return(obj)
 }
 
 #' @rdname label_expr2text
 #' @export
-#' @method label_expr2text plotly_built
+#' @method label_expr2text plotly
 #'
-label_expr2text.plotly_built <- function(obj, FUN = expr2latex_, ...){
+
+label_expr2text.plotly <- function(obj, FUN = expr2latex_, ...){
 
     # Update the main titles:
-    obj$layout$title %<>% FUN
+    obj$x$layout$title %<>% FUN
 
     # Update titles of all axes:
-    ind <- grep("axis", names(obj$layout), ignore.case = TRUE)
-    for (i in ind) {obj$layout[[i]]$title   %<>% FUN}
+    ind <- grep("axis", names(obj$x$layout), ignore.case = TRUE)
+    for (i in ind) {
+        if (is.null(obj[["x"]][["layout"]][[i]][["title"]])) {next}
+        obj$x$layout[[i]]$title   %<>% FUN
+        }
 
-    # obj$layout$xaxis$title   %<>% FUN
-    # obj$layout$yaxis$title   %<>% FUN
-    # obj$layout$zaxis$title   %<>% FUN
+    # obj$x$layout$xaxis$title   %<>% FUN
+    # obj$x$layout$yaxis$title   %<>% FUN
+    # obj$x$layout$zaxis$title   %<>% FUN
 
     return(obj)
 }
+
+
+# label_expr2text.plotly_built <- function(obj, FUN = expr2latex_, ...){
 

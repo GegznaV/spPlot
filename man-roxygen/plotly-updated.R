@@ -1,1 +1,1 @@
-#' @return An updated \pkg{plotly} object (class \code{plotly_built}).
+#' @return An updated \pkg{plotly} object (class \code{plotly}).

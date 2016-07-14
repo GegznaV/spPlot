@@ -62,7 +62,7 @@ legend group is shown. Result is visible if function
 \item{...}{Further parameters to methods.}
 }
 \value{
-An updated \pkg{plotly} object (class \code{plotly_built}).
+An updated \pkg{plotly} object (class \code{plotly}).
 }
 \description{
 Function allows modifying various legend options of object (plot) created

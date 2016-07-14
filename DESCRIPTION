@@ -3,7 +3,7 @@ Type: Package
 Title: Plots and Extensions for `hyperSpec`, `ggplot2` and `plotly`
 Description: Various plotting functions, convenience plotting functions and
              extesions for packages `hyperSpec`, `ggplot2` and `plotly`.
-Version: 0.0.006.1002
+Version: 0.0.7
 Date: 2016-06-16
 Encoding: UTF-8
 Authors@R: person("Vilmantas", "Gegzna", email = "GegznaV@gmail.com", role = c("aut", "cre"))
@@ -23,7 +23,7 @@ Depends:
 Imports:
     methods,
     spHelper,
-    plotly,
+    plotly (>= 4.0),
     ChemometricsWithR,
     MASS,
     RColorBrewer,

@@ -13,7 +13,7 @@ plotly_tidy(obj, ...)
 \item{...}{arguments to be passed to \code{\link{plotly_annotation_rm}}.}
 }
 \value{
-An updated \pkg{plotly} object (class \code{plotly_built}).
+An updated \pkg{plotly} object (class \code{plotly}).
 }
 \description{
 Tidy up \code{plotly} object, created from \code{ggplot} object.

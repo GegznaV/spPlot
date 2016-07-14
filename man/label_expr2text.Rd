@@ -4,7 +4,7 @@
 \alias{label_expr2text}
 \alias{label_expr2text.ggplot}
 \alias{label_expr2text.hyperSpec}
-\alias{label_expr2text.plotly_built}
+\alias{label_expr2text.plotly}
 \alias{label_expr2text.plotly_hash}
 \title{[!] Convert 'plotmath' expresions in labels to text}
 \usage{
@@ -16,7 +16,7 @@ label_expr2text(obj, FUN = expr2latex_, ...)
 
 \method{label_expr2text}{plotly_hash}(obj, FUN = expr2latex_, ...)
 
-\method{label_expr2text}{plotly_built}(obj, FUN = expr2latex_, ...)
+\method{label_expr2text}{plotly}(obj, FUN = expr2latex_, ...)
 }
 \arguments{
 \item{obj}{Object of approptiate class.}

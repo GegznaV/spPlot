@@ -103,24 +103,24 @@ plotly_modify_legend <- function(obj,
     obj <- plotly::plotly_build(obj)
 
     # Corrections
-    if (!is.null(showlegend))   {obj$layout$showlegend           <- as.logical(showlegend)}
-    if (!is.null(orientation))  {obj$layout$legend$orientation   <- match.arg(orientation, c("v", "h"))}
-    if (!is.null(traceorder))   {obj$layout$legend$traceorder    <- match.arg(traceorder, c( "normal", "reversed", "grouped", "reversed+grouped","grouped+reversed"))}
-    if (!is.null(bgcolor))      {obj$layout$legend$bgcolor       <- bgcolor}
-    if (!is.null(bordercolor))  {obj$layout$legend$bordercolor   <- bordercolor}
-    if (!is.null(borderwidth))  {obj$layout$legend$borderwidth   <- borderwidth}
-    if (!is.null(fontcolor))    {obj$layout$legend$font$color    <- fontcolor}
-    if (!is.null(fontfamily))   {obj$layout$legend$font$family   <- fontfamily}
-    if (!is.null(fontsize))     {obj$layout$legend$font$size     <- fontsize}
-    if (!is.null(tracegroupgap)){obj$layout$legend$tracegroupgap <- as.numeric(tracegroupgap)}
+    if (!is.null(showlegend))   {obj$x$layout$showlegend           <- as.logical(showlegend)}
+    if (!is.null(orientation))  {obj$x$layout$legend$orientation   <- match.arg(orientation, c("v", "h"))}
+    if (!is.null(traceorder))   {obj$x$layout$legend$traceorder    <- match.arg(traceorder, c( "normal", "reversed", "grouped", "reversed+grouped","grouped+reversed"))}
+    if (!is.null(bgcolor))      {obj$x$layout$legend$bgcolor       <- bgcolor}
+    if (!is.null(bordercolor))  {obj$x$layout$legend$bordercolor   <- bordercolor}
+    if (!is.null(borderwidth))  {obj$x$layout$legend$borderwidth   <- borderwidth}
+    if (!is.null(fontcolor))    {obj$x$layout$legend$font$color    <- fontcolor}
+    if (!is.null(fontfamily))   {obj$x$layout$legend$font$family   <- fontfamily}
+    if (!is.null(fontsize))     {obj$x$layout$legend$font$size     <- fontsize}
+    if (!is.null(tracegroupgap)){obj$x$layout$legend$tracegroupgap <- as.numeric(tracegroupgap)}
 
-    if (!is.null(x))            {obj$layout$legend$x             <- x}
-    if (!is.null(y))            {obj$layout$legend$y             <- y}
-    if (!is.null(xanchor))      {obj$layout$legend$xanchor       <- match.arg(xanchor, c("auto", "left", "center", "right"))}
-    if (!is.null(yanchor))      {obj$layout$legend$yanchor       <- match.arg(yanchor, c("auto", "top" , "middle", "bottom"))}
+    if (!is.null(x))            {obj$x$layout$legend$x             <- x}
+    if (!is.null(y))            {obj$x$layout$legend$y             <- y}
+    if (!is.null(xanchor))      {obj$x$layout$legend$xanchor       <- match.arg(xanchor, c("auto", "left", "center", "right"))}
+    if (!is.null(yanchor))      {obj$x$layout$legend$yanchor       <- match.arg(yanchor, c("auto", "top" , "middle", "bottom"))}
 
-    # Length of data list
-    LEN <- length(obj$data)
+    # Length of list "data"
+    LEN <- length(obj$x$data)
 
     # Remove repeated text in legend labels and legend group names
     if (rm_repText == TRUE){
@@ -129,8 +129,8 @@ plotly_modify_legend <- function(obj,
 
         # Apply the function
         for (i in 1:LEN) {
-            obj$data[[i]]$name        %<>% rm_repeated
-            obj$data[[i]]$legendgroup %<>% rm_repeated
+            obj$x$data[[i]]$name        %<>% rm_repeated
+            obj$x$data[[i]]$legendgroup %<>% rm_repeated
         }
 
     }
@@ -147,17 +147,17 @@ plotly_modify_legend <- function(obj,
     #
     # # Apply the function
     #     for (i in 1:LEN) {
-    #         obj$data[[i]]$name <- recover_missing(obj$data[[i]]$name,
-    #                                               obj$data[[i]]$legendgroup)
+    #         obj$x$data[[i]]$name <- recover_missing(obj$x$data[[i]]$name,
+    #                                               obj$x$data[[i]]$legendgroup)
     #     }
     # }
 
     # Show only one legend per legend group -----------------------------
-    if (unique.legend == TRUE & obj$layout$showlegend == TRUE){
+    if (unique.legend == TRUE & obj$x$layout$showlegend == TRUE){
         if_len0 <- function(x,y) if(length(x)!=0) x else y
 
         # Extract variables "showlegend" and "legendgroup"
-        DF <- sapply(obj$data, function(x) {
+        DF <- sapply(obj$x$data, function(x) {
             list(showlegend  =         x$showlegend,
                  legendgroup = if_len0(x$legendgroup, NA))
         }) %>% t %>% as.data.frame()
@@ -167,13 +167,10 @@ plotly_modify_legend <- function(obj,
         DF$showlegend <- is_unique_gr(DF$legendgroup)
 
         for (i in 1:LEN) {
-            obj$data[[i]]$showlegend <- DF$showlegend[i]
+            obj$x$data[[i]]$showlegend <- DF$showlegend[i]
         }
 
     }
-
-
-
 
     return(obj)
 }

@@ -45,7 +45,7 @@ the python/d3 number formatting language. See
  If \code{NULL} (default) value of this option will not be changed.}
 }
 \value{
-An updated \pkg{plotly} object (class \code{plotly_built}).
+An updated \pkg{plotly} object (class \code{plotly}).
 }
 \description{
 Function corrects text in a hover of  a \code{plotly} object.

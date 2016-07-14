@@ -11,12 +11,15 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![CRAN version](http://www.r-pkg.org/badges/version/spPlot)](http://cran.rstudio.com/web/packages/spPlot/index.html)  
+***
+
+[![CRAN version](http://www.r-pkg.org/badges/version/spPlot)](http://cran.rstudio.com/web/packages/spPlot/index.html)
 [![GitHub version](https://img.shields.io/badge/GitHub-v`r packageVersion("spPlot")`-brightgreen.svg)](https://github.com/GegznaV/spPlot)
 [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spPlot.svg?branch=master)](https://travis-ci.org/GegznaV/spPlot)
 [![codecov.io](https://codecov.io/github/GegznaV/spPlot/coverage.svg?branch=master)](https://codecov.io/github/GegznaV/spPlot?branch=master)
+[![Last-update](https://img.shields.io/badge/Updated%20on-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](/commits/master)
 
-
+***
   
 Development version of package `spPlot` 
 ==========================================
@@ -49,8 +52,8 @@ install_github("GegznaV/spPlot")
 
 * * *
 
- <p align="right"> 
- File updated on <b>`r Sys.Date()`</b> with version of package  <b>`r packageVersion("spPlot")`</b>
- </p>    
+ <!-- <p align="right">  -->
+ <!-- File updated on <b>`r Sys.Date()`</b> with version of package  <b>`r packageVersion("spPlot")`</b> -->
+ <!-- </p>     -->
 
 
