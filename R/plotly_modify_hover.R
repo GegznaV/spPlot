@@ -126,9 +126,10 @@ update_text <- function(in_text, replace_with = list()){
     TO   <- replace_with
 
     # Remove duplicated entries
+    # txt <- gsub("(.*)(<br>.+)(<br>)?.*(?:\\2)","\\1\\2", in_text)
     txt <- gsub("(.*)(<br>.+)(<br>).*(?:\\2)","\\1\\2", in_text)
 
-    # Add \\ to special symbols
+    # Add \\ to treat special symbols as symbols
     FROM <- gsub("([\\^\\$\\{\\}\\[\\]\\(\\)\\.\\*\\+\\?\\<\\>\\&\\|\\\\])",
                "\\\\\\\\\\1", FROM, perl=TRUE)
     # Create pattern

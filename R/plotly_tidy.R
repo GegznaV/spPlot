@@ -7,7 +7,8 @@
 #' \code{\link{label_expr2text}},
 #' \code{\link{plotly_modify_legend}},
 #' \code{\link{plotly_modify_hover}},
-#' \code{\link{plotly_annotation_rm}}.
+#' \code{\link{plotly_annotation_rm}}. \cr
+#' \code{plotly_tidy0} does first 3 steps but does not remove annotations.
 #'
 #' @template obj-plotly
 #' @param ... arguments to be passed to \code{\link{plotly_annotation_rm}}.
@@ -31,4 +32,13 @@ plotly_tidy <- function (obj, ...) {
         plotly_modify_legend %>%
         plotly_modify_hover  %>%
         plotly_annotation_rm(...)
+}
+
+#' @rdname plotly_tidy
+#' @export
+plotly_tidy0 <- function (obj) {
+    obj  %>%
+        label_expr2text      %>%
+        plotly_modify_legend %>%
+        plotly_modify_hover
 }

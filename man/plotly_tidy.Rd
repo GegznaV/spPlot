@@ -2,9 +2,12 @@
 % Please edit documentation in R/plotly_tidy.R
 \name{plotly_tidy}
 \alias{plotly_tidy}
+\alias{plotly_tidy0}
 \title{Tidy up `plotly` plot}
 \usage{
 plotly_tidy(obj, ...)
+
+plotly_tidy0(obj)
 }
 \arguments{
 \item{obj}{a \pkg{plotly} object (created with function \code{plot_ly},
@@ -24,7 +27,8 @@ This function is a wrapper of following functions with default
 \code{\link{label_expr2text}},
 \code{\link{plotly_modify_legend}},
 \code{\link{plotly_modify_hover}},
-\code{\link{plotly_annotation_rm}}.
+\code{\link{plotly_annotation_rm}}. \cr
+\code{plotly_tidy0} does first 3 steps but does not remove annotations.
 }
 \author{
 Vilmantas Gegzna
