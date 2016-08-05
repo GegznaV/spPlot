@@ -5,7 +5,7 @@
 \title{[!] \code{ggplot} method for class \code{hyperSpec}}
 \usage{
 \method{ggplot}{hyperSpec}(obj, mapping = aes(), wl.range = NULL,
-  palette = NULL, ..., format = "\%g")
+  palette = NULL, ..., format = "\%g", environment)
 }
 \arguments{
 \item{obj}{\code{\link[=hyperSpec-class]{hyperSpec}} object.}
@@ -33,6 +33,8 @@ parameters. Otherwise standard \pkg{ggplot2}  functions, such as
 \item{format}{A string with format to be passed to \code{\link[base]{sprintf}}.
 This string is used to format text in labels of wavelength intervals, when
 \code{wl.range} is specified. Default format is \code{'\%g'}.}
+
+\item{environment}{Not used yet.}
 }
 \value{
 A \code{\link[ggplot2]{ggplot}} object.

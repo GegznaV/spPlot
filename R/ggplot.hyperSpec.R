@@ -26,6 +26,9 @@
 #' This string is used to format text in labels of wavelength intervals, when
 #' \code{wl.range} is specified. Default format is \code{'\%g'}.
 #'
+#' @param environment Not used yet.
+#'
+#'
 #' @inheritParams ggplot2::ggplot
 #'
 #'
@@ -72,7 +75,8 @@
 
 ggplot.hyperSpec <- function (obj, mapping = aes(), wl.range = NULL,
                                          palette = NULL, ...,
-                                         format = "%g")
+                                         format = "%g",
+                              environment)
 {
     chk.hy(obj)
     validObject(obj)
