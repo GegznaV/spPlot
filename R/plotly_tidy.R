@@ -20,6 +20,7 @@
 #' before the sequence described above but does not remove annotations.
 #'
 #' @template obj-plotly
+#' @param title (string | NULL) the title of the plot.
 #' @param ... in \code{plotly_tidy} arguments to be passed to
 #'               \code{\link{plotly_annotation_rm}}.\cr
 #'          in \code{ggplotly_tidy} arguments to be passed to
@@ -40,29 +41,44 @@
 #'
 #' @family \pkg{spPlot} functions for \pkg{plotly}
 #'
-plotly_tidy <- function (obj) {
+plotly_tidy <- function (obj,title = NULL) {
     obj  %>%
         label_expr2text      %>%
         plotly_modify_legend %>%
-        plotly_modify_hover
+        plotly_modify_hover %>%
+        plotly::layout(title = title)
 }
 
 #' @rdname plotly_tidy
 #' @export
-plotly_tidy0 <- function (obj, ...) {
+plotly_tidy0 <- function (obj,title = NULL, ...) {
     obj  %>%
         label_expr2text      %>%
         plotly_modify_legend %>%
         plotly_modify_hover  %>%
-        plotly_annotation_rm(...)
+        plotly_annotation_rm(...) %>%
+        plotly::layout(title = title)
 }
 
 #' @rdname plotly_tidy
 #' @export
-ggplotly_tidy <- function (obj, ...) {
+ggplotly_tidy <- function (obj,title = NULL, ...) {
     obj  %>%
         ggplotly(...)        %>%
         label_expr2text      %>%
         plotly_modify_legend %>%
-        plotly_modify_hover
+        plotly_modify_hover %>%
+        plotly::layout(title = title)
+}
+
+#' @rdname plotly_tidy
+#' @export
+ggplotly_tidy0 <- function (obj, title = NULL, ...) {
+    obj  %>%
+        ggplotly(...)        %>%
+        label_expr2text      %>%
+        plotly_modify_legend %>%
+        plotly_modify_hover  %>%
+        plotly_annotation_rm  %>%
+        plotly::layout(title = title)
 }

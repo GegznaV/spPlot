@@ -2,19 +2,24 @@
 % Please edit documentation in R/plotly_tidy.R
 \name{plotly_tidy}
 \alias{ggplotly_tidy}
+\alias{ggplotly_tidy0}
 \alias{plotly_tidy}
 \alias{plotly_tidy0}
 \title{Tidy up `plotly` plot}
 \usage{
-plotly_tidy(obj)
+plotly_tidy(obj, title = NULL)
 
-plotly_tidy0(obj, ...)
+plotly_tidy0(obj, title = NULL, ...)
 
-ggplotly_tidy(obj, ...)
+ggplotly_tidy(obj, title = NULL, ...)
+
+ggplotly_tidy0(obj, title = NULL, ...)
 }
 \arguments{
 \item{obj}{a \pkg{plotly} object (created with function \code{plot_ly},
 \code{ggplotly}, \code{subplot} or similar).}
+
+\item{title}{(string | NULL) the title of the plot.}
 
 \item{...}{in \code{plotly_tidy} arguments to be passed to
      \code{\link{plotly_annotation_rm}}.\cr

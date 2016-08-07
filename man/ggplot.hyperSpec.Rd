@@ -4,8 +4,8 @@
 \alias{ggplot.hyperSpec}
 \title{[!] \code{ggplot} method for class \code{hyperSpec}}
 \usage{
-\method{ggplot}{hyperSpec}(obj, mapping = aes(), wl.range = NULL,
-  palette = NULL, ..., format = "\%g", environment)
+\method{ggplot}{hyperSpec}(obj, mapping = aes(), ..., wl.range = NULL,
+  palette = NULL, format = "\%g", environment)
 }
 \arguments{
 \item{obj}{\code{\link[=hyperSpec-class]{hyperSpec}} object.}
@@ -15,6 +15,9 @@ Default values are \code{aes_string(x = ".wavelength",
 y = "spc", group = ".rownames")}. Provided pameters update and modify this
 list. Other not specified parameters must be suppled in each layer added
 to the plot.}
+
+\item{...}{further arguments to be passed to function
+\code{\link[ggplot2]{ggplot}}.}
 
 \item{wl.range}{wavelength ranges to plot. The ranges will be plotted
 as separate columns of facets. Examples in \code{\link[hyperSpec]{wl2i}}
@@ -26,9 +29,6 @@ parameters. Otherwise standard \pkg{ggplot2}  functions, such as
 \code{\link[ggplot2]{facet_wrap}} should be used if facetting is needed.}
 
 \item{palette}{[Expreimental!!!] Color palete for \code{color} and \code{fill}.}
-
-\item{...}{further arguments to be passed to function
-\code{\link[ggplot2]{ggplot}}.}
 
 \item{format}{A string with format to be passed to \code{\link[base]{sprintf}}.
 This string is used to format text in labels of wavelength intervals, when

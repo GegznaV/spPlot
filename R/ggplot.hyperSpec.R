@@ -73,9 +73,11 @@
 #' ggplot(Sp2[1]) + stat_color(geom = "bar")+ scale_color_identity()
 
 
-ggplot.hyperSpec <- function (obj, mapping = aes(), wl.range = NULL,
-                                         palette = NULL, ...,
-                                         format = "%g",
+ggplot.hyperSpec <- function (obj, mapping = aes(),
+                              ...,
+                              wl.range = NULL,
+                              palette = NULL,
+                              format = "%g",
                               environment)
 {
     chk.hy(obj)
