@@ -21,6 +21,7 @@
 #'
 #' @template obj-plotly
 #' @param title (string | NULL) the title of the plot.
+#' @param obj_gg \pkg{ggplot2} object.
 #' @param ... in \code{plotly_tidy} arguments to be passed to
 #'               \code{\link{plotly_annotation_rm}}.\cr
 #'          in \code{ggplotly_tidy} arguments to be passed to
@@ -41,7 +42,7 @@
 #'
 #' @family \pkg{spPlot} functions for \pkg{plotly}
 #'
-plotly_tidy <- function (obj,title = NULL) {
+plotly_tidy <- function (obj, title = NULL) {
     obj  %>%
         label_expr2text      %>%
         plotly_modify_legend %>%
@@ -62,8 +63,9 @@ plotly_tidy0 <- function (obj,title = NULL, ...) {
 
 #' @rdname plotly_tidy
 #' @export
-ggplotly_tidy <- function (obj,title = NULL, ...) {
-    obj  %>%
+ggplotly_tidy <- function (obj_gg = ggplot2::last_plot(),
+                           title = NULL, ...) {
+    obj_gg  %>%
         ggplotly(...)        %>%
         label_expr2text      %>%
         plotly_modify_legend %>%
@@ -73,8 +75,9 @@ ggplotly_tidy <- function (obj,title = NULL, ...) {
 
 #' @rdname plotly_tidy
 #' @export
-ggplotly_tidy0 <- function (obj, title = NULL, ...) {
-    obj  %>%
+ggplotly_tidy0 <- function (obj_gg = ggplot2::last_plot(),
+                            title = NULL, ...) {
+    obj_gg  %>%
         ggplotly(...)        %>%
         label_expr2text      %>%
         plotly_modify_legend %>%

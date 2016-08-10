@@ -11,9 +11,9 @@ plotly_tidy(obj, title = NULL)
 
 plotly_tidy0(obj, title = NULL, ...)
 
-ggplotly_tidy(obj, title = NULL, ...)
+ggplotly_tidy(obj_gg = ggplot2::last_plot(), title = NULL, ...)
 
-ggplotly_tidy0(obj, title = NULL, ...)
+ggplotly_tidy0(obj_gg = ggplot2::last_plot(), title = NULL, ...)
 }
 \arguments{
 \item{obj}{a \pkg{plotly} object (created with function \code{plot_ly},
@@ -25,6 +25,8 @@ ggplotly_tidy0(obj, title = NULL, ...)
      \code{\link{plotly_annotation_rm}}.\cr
 in \code{ggplotly_tidy} arguments to be passed to
      \code{\link{plotly_annotation_rm}}.\cr}
+
+\item{obj_gg}{\pkg{ggplot2} object.}
 }
 \value{
 An updated \pkg{plotly} object (class \code{plotly}).

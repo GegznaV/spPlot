@@ -1,0 +1,219 @@
+	
+Next
+
+Prev
+
+All
+
+
+Replace
+
+All
+	
+In selection
+	
+Match case
+	
+Whole word
+	
+Regex
+	
+Wrap
+
+
+  
+
+86
+87
+88
+89
+                                 borderwidth     = NULL,
+                                 fontcolor       = NULL,
+                                 fontfamily      = NULL,
+
+Console~/R/Spektroskopija/TD_2015/
+			
+Console
+R Markdown
+	
+~/R/Spektroskopija/TD_2015/	
+			
+> obj %>% str
+List of 3
+ $ data  :List of 4
+  ..$ :List of 13
+  .. ..$ x          : num [1:300] 602 606 610 614 618 622 626 630 634 638 ...
+  .. ..$ y          : num [1:300] 353 358 345 330 350 ...
+  .. ..$ text       : chr [1:300] ".wavelength: 602<br>spc: 352.99<br>.rownames: 1<br>.aggregate: matrix<br>.aggregate: matrix<br>.aggregate: matrix" ".wavelength: 606<br>spc: 357.88<br>.rownames: 1<br>.aggregate: matrix<br>.aggregate: matrix<br>.aggregate: matrix" ".wavelength: 610<br>spc: 344.95<br>.rownames: 1<br>.aggregate: matrix<br>.aggregate: matrix<br>.aggregate: matrix" ".wavelength: 614<br>spc: 330.22<br>.rownames: 1<br>.aggregate: matrix<br>.aggregate: matrix<br>.aggregate: matrix" ...
+  .. ..$ key        : logi NA
+  .. ..$ type       : chr "scatter"
+  .. ..$ mode       : chr "lines"
+  .. ..$ name       : chr "(matrix,matrix,matrix)"
+  .. ..$ line       :List of 3
+  .. .. ..$ width: num 3.02
+  .. .. ..$ color: chr "rgba(27,158,119,1)"
+  .. .. ..$ dash : chr "solid"
+  .. ..$ legendgroup: chr "(matrix,matrix,matrix)"
+  .. ..$ showlegend : logi TRUE
+  .. ..$ xaxis      : chr "x"
+  .. ..$ yaxis      : chr "y"
+  .. ..$ hoverinfo  : chr "text"
+  ..$ :List of 13
+  .. ..$ x          : num [1:300] 602 606 610 614 618 622 626 630 634 638 ...
+  .. ..$ y          : num [1:300] 329 331 320 309 329 ...
+  .. ..$ text       : chr [1:300] ".wavelength: 602<br>spc: 328.9<br>.rownames: 2<br>.aggregate: lacuna<br>.aggregate: lacuna<br>.aggregate: lacuna" ".wavelength: 606<br>spc: 331.07<br>.rownames: 2<br>.aggregate: lacuna<br>.aggregate: lacuna<br>.aggregate: lacuna" ".wavelength: 610<br>spc: 320.19<br>.rownames: 2<br>.aggregate: lacuna<br>.aggregate: lacuna<br>.aggregate: lacuna" ".wavelength: 614<br>spc: 308.95<br>.rownames: 2<br>.aggregate: lacuna<br>.aggregate: lacuna<br>.aggregate: lacuna" ...
+  .. ..$ key        : logi NA
+  .. ..$ type       : chr "scatter"
+  .. ..$ mode       : chr "lines"
+  .. ..$ name       : chr "(lacuna,lacuna,lacuna)"
+  .. ..$ line       :List of 3
+  .. .. ..$ width: num 3.02
+  .. .. ..$ color: chr "rgba(217,95,2,1)"
+  .. .. ..$ dash : chr "solid"
+  .. ..$ legendgroup: chr "(lacuna,lacuna,lacuna)"
+  .. ..$ showlegend : logi TRUE
+  .. ..$ xaxis      : chr "x"
+  .. ..$ yaxis      : chr "y"
+  .. ..$ hoverinfo  : chr "text"
+  ..$ :List of 13
+  .. ..$ x          : num [1:300] 602 606 610 614 618 622 626 630 634 638 ...
+  .. ..$ y          : num [1:300] 353 353 341 329 355 ...
+  .. ..$ text       : chr [1:300] ".wavelength: 602<br>spc: 352.66<br>.rownames: 3<br>.aggregate: cell<br>.aggregate: cell<br>.aggregate: cell" ".wavelength: 606<br>spc: 353.4<br>.rownames: 3<br>.aggregate: cell<br>.aggregate: cell<br>.aggregate: cell" ".wavelength: 610<br>spc: 341.43<br>.rownames: 3<br>.aggregate: cell<br>.aggregate: cell<br>.aggregate: cell" ".wavelength: 614<br>spc: 329.28<br>.rownames: 3<br>.aggregate: cell<br>.aggregate: cell<br>.aggregate: cell" ...
+  .. ..$ key        : logi NA
+  .. ..$ type       : chr "scatter"
+  .. ..$ mode       : chr "lines"
+  .. ..$ name       : chr "(cell,cell,cell)"
+  .. ..$ line       :List of 3
+  .. .. ..$ width: num 3.02
+  .. .. ..$ color: chr "rgba(117,112,179,1)"
+  .. .. ..$ dash : chr "solid"
+  .. ..$ legendgroup: chr "(cell,cell,cell)"
+  .. ..$ showlegend : logi TRUE
+  .. ..$ xaxis      : chr "x"
+  .. ..$ yaxis      : chr "y"
+  .. ..$ hoverinfo  : chr "text"
+  ..$ :List of 13
+  .. ..$ x          : num [1:300] 602 606 610 614 618 622 626 630 634 638 ...
+  .. ..$ y          : num [1:300] 343 346 334 321 342 ...
+  .. ..$ text       : chr [1:300] ".wavelength: 602<br>spc: 343.05<br>.rownames: 4<br>.aggregate: .All<br>.aggregate: .All<br>.aggregate: .All" ".wavelength: 606<br>spc: 345.92<br>.rownames: 4<br>.aggregate: .All<br>.aggregate: .All<br>.aggregate: .All" ".wavelength: 610<br>spc: 334.04<br>.rownames: 4<br>.aggregate: .All<br>.aggregate: .All<br>.aggregate: .All" ".wavelength: 614<br>spc: 321.34<br>.rownames: 4<br>.aggregate: .All<br>.aggregate: .All<br>.aggregate: .All" ...
+  .. ..$ key        : logi NA
+  .. ..$ type       : chr "scatter"
+  .. ..$ mode       : chr "lines"
+  .. ..$ name       : chr "(.All,.All,.All)"
+  .. ..$ line       :List of 3
+  .. .. ..$ width: num 4.16
+  .. .. ..$ color: chr "rgba(0,0,0,1)"
+  .. .. ..$ dash : chr "dash"
+  .. ..$ legendgroup: chr "(.All,.All,.All)"
+  .. ..$ showlegend : logi TRUE
+  .. ..$ xaxis      : chr "x"
+  .. ..$ yaxis      : chr "y"
+  .. ..$ hoverinfo  : chr "text"
+ $ layout:List of 12
+  ..$ margin       :List of 4
+  .. ..$ t: num 39.5
+  .. ..$ r: num 7.97
+  .. ..$ b: num 37
+  .. ..$ l: num 53.4
+  ..$ plot_bgcolor : chr "rgba(255,255,255,1)"
+  ..$ paper_bgcolor: chr "rgba(255,255,255,1)"
+  ..$ font         :List of 3
+  .. ..$ color : chr "rgba(0,0,0,1)"
+  .. ..$ family: chr ""
+  .. ..$ size  : num 15.9
+  ..$ title        : chr "Mean"
+  ..$ titlefont    :List of 3
+  .. ..$ color : chr "rgba(0,0,0,1)"
+  .. ..$ family: chr ""
+  .. ..$ size  : num 19.1
+  ..$ xaxis        :List of 25
+  .. ..$ type          : chr "linear"
+  .. ..$ autorange     : logi FALSE
+  .. ..$ tickmode      : chr "array"
+  .. ..$ range         : num [1:2] 542 1858
+  .. ..$ ticktext      : chr [1:5] "600" "900" "1200" "1500" ...
+  .. ..$ tickvals      : num [1:5] 600 900 1200 1500 1800
+  .. ..$ ticks         : chr "outside"
+  .. ..$ tickcolor     : chr "rgba(0,0,0,1)"
+  .. ..$ ticklen       : num 3.99
+  .. ..$ tickwidth     : num 0.664
+  .. ..$ showticklabels: logi TRUE
+  .. ..$ tickfont      :List of 3
+  .. .. ..$ color : chr "rgba(0,0,0,1)"
+  .. .. ..$ family: chr ""
+  .. .. ..$ size  : num 12.8
+  .. ..$ tickangle     : num 0
+  .. ..$ showline      : logi FALSE
+  .. ..$ linecolor     : logi NA
+  .. ..$ linewidth     : num 0
+  .. ..$ showgrid      : logi TRUE
+  .. ..$ domain        : num [1:2] 0 1
+  .. ..$ gridcolor     : chr "rgba(229,229,229,1)"
+  .. ..$ gridwidth     : num 0.266
+  .. ..$ zeroline      : logi FALSE
+  .. ..$ anchor        : chr "y"
+  .. ..$ title         :  expression(Delta * tilde(nu)/cm^-1)
+  .. ..$ titlefont     :List of 3
+  .. .. ..$ color : chr "rgba(0,0,0,1)"
+  .. .. ..$ family: chr ""
+  .. .. ..$ size  : num 15.9
+  .. ..$ hoverformat   : chr ".2f"
+  ..$ yaxis        :List of 25
+  .. ..$ type          : chr "linear"
+  .. ..$ autorange     : logi FALSE
+  .. ..$ tickmode      : chr "array"
+  .. ..$ range         : num [1:2] 62.2 1357.7
+  .. ..$ ticktext      : chr [1:2] "500" "1000"
+  .. ..$ tickvals      : num [1:2] 500 1000
+  .. ..$ ticks         : chr "outside"
+  .. ..$ tickcolor     : chr "rgba(0,0,0,1)"
+  .. ..$ ticklen       : num 3.99
+  .. ..$ tickwidth     : num 0.664
+  .. ..$ showticklabels: logi TRUE
+  .. ..$ tickfont      :List of 3
+  .. .. ..$ color : chr "rgba(0,0,0,1)"
+  .. .. ..$ family: chr ""
+  .. .. ..$ size  : num 12.8
+  .. ..$ tickangle     : num 0
+  .. ..$ showline      : logi FALSE
+  .. ..$ linecolor     : logi NA
+  .. ..$ linewidth     : num 0
+  .. ..$ showgrid      : logi TRUE
+  .. ..$ domain        : num [1:2] 0 1
+  .. ..$ gridcolor     : chr "rgba(229,229,229,1)"
+  .. ..$ gridwidth     : num 0.266
+  .. ..$ zeroline      : logi FALSE
+  .. ..$ anchor        : chr "x"
+  .. ..$ title         :  expression("I / a.u.")
+  .. ..$ titlefont     :List of 3
+  .. .. ..$ color : chr "rgba(0,0,0,1)"
+  .. .. ..$ family: chr ""
+  .. .. ..$ size  : num 15.9
+  .. ..$ hoverformat   : chr ".2f"
+  ..$ shapes       :List of 1
+  .. ..$ :List of 9
+  .. .. ..$ type     : chr "rect"
+  .. .. ..$ fillcolor: chr "transparent"
+  .. .. ..$ line     :List of 3
+  .. .. .. ..$ color   : chr "rgba(127,127,127,1)"
+  .. .. .. ..$ width   : num 0.664
+  .. .. .. ..$ linetype: chr "solid"
+  .. .. ..$ yref     : chr "paper"
+  .. .. ..$ xref     : chr "paper"
+  .. .. ..$ x0       : num 0
+  .. .. ..$ x1       : num 1
+  .. .. ..$ y0       : num 0
+  .. .. ..$ y1       : num 1
+  ..$ showlegend   : logi TRUE
+  ..$ legend       :List of 5
+  .. ..$ bgcolor    : chr "rgba(255,255,255,1)"
+  .. ..$ bordercolor: chr "transparent"
+  .. ..$ borderwidth: num 1.89
+  .. ..$ font       :List of 3
+  .. .. ..$ color : chr "rgba(0,0,0,1)"
+  .. .. ..$ family: chr ""
+  .. .. ..$ size  : num 12.8
+  .. ..$ y          : num 1
+  ..$ hovermode    : chr "closest"
+ $ source: chr "A"
+ - attr(*, "class")= chr "plotly_built"
