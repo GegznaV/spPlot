@@ -101,7 +101,7 @@ get_ggLims <- function(obj, which = "y",...) {
 #' @export
 set_ggLims <- function(value, which = "y",...) {
     if (length(value)  %!in% c(2,4)) stop("`value` must contain either 2 or 4 values.")
-    if (length(value)==4) which == "xy"
+    if (length(value)==4) which = "xy"
     switch(tolower(which),
            "y" = coord_cartesian(ylim = value), # scale_y_continuous(limits = value),
            "x" = coord_cartesian(xlim = value), #scale_x_continuous(limits = value),

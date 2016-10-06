@@ -3,7 +3,7 @@
 
 ------------------------------------------------------------------------
 
-[![CRAN version](http://www.r-pkg.org/badges/version/spPlot)](http://cran.rstudio.com/web/packages/spPlot/index.html) [![GitHub version](https://img.shields.io/badge/GitHub-v0.0.10-brightgreen.svg)](https://github.com/GegznaV/spPlot) [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spPlot.svg?branch=master)](https://travis-ci.org/GegznaV/spPlot) [![codecov.io](https://codecov.io/github/GegznaV/spPlot/coverage.svg?branch=master)](https://codecov.io/github/GegznaV/spPlot?branch=master) [![Last-update](https://img.shields.io/badge/Updated%20on-2016--08--05-yellowgreen.svg)](/commits/master)
+[![CRAN version](http://www.r-pkg.org/badges/version/spPlot)](http://cran.rstudio.com/web/packages/spPlot/index.html) [![GitHub version](https://img.shields.io/badge/GitHub-v0.0.11-brightgreen.svg)](https://github.com/GegznaV/spPlot) [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spPlot.svg?branch=master)](https://travis-ci.org/GegznaV/spPlot) [![codecov.io](https://codecov.io/github/GegznaV/spPlot/coverage.svg?branch=master)](https://codecov.io/github/GegznaV/spPlot?branch=master) [![Last-update](https://img.shields.io/badge/Updated%20on-2016--08--12-yellowgreen.svg)](/commits/master)
 
 ------------------------------------------------------------------------
 
@@ -35,4 +35,4 @@ install_github("GegznaV/spPlot")
 
 ------------------------------------------------------------------------
 
-<!-- <p align="right">  --> <!-- File updated on <b>2016-08-05</b> with version of package  <b>0.0.10</b> --> <!-- </p>     -->
+<!-- <p align="right">  --> <!-- File updated on <b>2016-08-12</b> with version of package  <b>0.0.11</b> --> <!-- </p>     -->

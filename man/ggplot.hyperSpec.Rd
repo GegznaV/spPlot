@@ -10,7 +10,7 @@
 \arguments{
 \item{obj}{\code{\link[=hyperSpec-class]{hyperSpec}} object.}
 
-\item{mapping}{Default list of aesthetic mappings to use for plot.
+\item{mapping}{Default list of aesthetic mappings to be used for plotting.
 Default values are \code{aes_string(x = ".wavelength",
 y = "spc", group = ".rownames")}. Provided pameters update and modify this
 list. Other not specified parameters must be suppled in each layer added
