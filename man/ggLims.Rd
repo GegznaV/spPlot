@@ -16,27 +16,36 @@ ggLims(obj, which = "y", ...)
 
 get_ggLims(obj, which = "y", ...)
 
-set_ggLims(value, which = "y", ...)
+set_ggLims(value, which = "y", ..., expand = TRUE)
 }
 \arguments{
 \item{obj}{A ggplot object.}
 
 \item{which}{(A string) either "x", "y" (default) or "xy" which
-indicates axis if inerest.}
+indicates axis if inerest.\cr
+In case of "set_ggLims" following inputs are also possible if a list
+should be returned: "xy_" or "xy_list".}
 
 \item{...}{For generic use.}
 
 \item{value}{Values of limits: either vector of \bold{2 values} (min and max)
 for axis indicated in \code{which} or vector of \bold{4 values}
 (x min, x max, y min, y max) to be passed to function
-\code{\link[ggplot2]{coord_cartesian}}. \emph{NOTE}, that this function behaves differently than \code{\link[ggplot2]{lims}}.}
+\code{\link[ggplot2]{coord_cartesian}}.
+\emph{NOTE}, that this function behaves differently
+than \code{\link[ggplot2]{lims}}.}
+
+\item{expand}{If \code{TRUE}, the default, adds a small expansion factor to
+the limits to ensure that data and axes don't overlap. If \code{FALSE},
+limits are taken exactly from the data or \code{xlim}/\code{ylim}.}
 }
 \value{
 One of the following depending on inputs: \cr
 a) vector of ranges of \emph{one} axis as
-\code{(min, max)},
+\code{(min, max)}, or \emph{both} axes as
+\code{(x_min, x_max, y_min, y_max)},
 b) list of limits for both axes as
- \code{list(x = (x min, x max), y = (y min, y max)}\cr
+ \code{list(x = (x_min, x_max), y = (y_min, y_max)}\cr
 c) updated ggplot object
 }
 \description{
@@ -59,7 +68,9 @@ ggLims(obj)
 ggLims(obj, "y")
 
 ggLims(obj, "x")
-ggLims(obj, "xy")
+ggLims(obj, "xy")  # return as a vector
+ggLims(obj, "xy_") # return as a list
+
 
 \donttest{
 \dontrun{

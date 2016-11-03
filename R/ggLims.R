@@ -3,14 +3,17 @@
 #'
 #' @param obj A ggplot object.
 #' @param which (A string) either "x", "y" (default) or "xy" which
-#'        indicates axis if inerest.
+#'        indicates axis if inerest.\cr
+#'        In case of "set_ggLims" following inputs are also possible if a list
+#'        should be returned: "xy_" or "xy_list".
 #' @param ... For generic use.
 #'
 #' @return One of the following depending on inputs: \cr
 #' a) vector of ranges of \emph{one} axis as
-#' \code{(min, max)},
+#' \code{(min, max)}, or \emph{both} axes as
+#' \code{(x_min, x_max, y_min, y_max)},
 #' b) list of limits for both axes as
-#'  \code{list(x = (x min, x max), y = (y min, y max)}\cr
+#'  \code{list(x = (x_min, x_max), y = (y_min, y_max)}\cr
 #' c) updated ggplot object
 #' @export
 #' @details
@@ -30,7 +33,9 @@
 #' ggLims(obj, "y")
 #'
 #' ggLims(obj, "x")
-#' ggLims(obj, "xy")
+#' ggLims(obj, "xy")  # return as a vector
+#' ggLims(obj, "xy_") # return as a list
+#'
 #'
 #' \donttest{
 #' \dontrun{
@@ -83,29 +88,56 @@ ggLims.numeric <- function(value, which = "y",...){
 #' @rdname ggLims
 #' @export
 get_ggLims <- function(obj, which = "y",...) {
-    x = ggplot_build(obj)$panel$ranges[[1]]$y.range
-    y = ggplot_build(obj)$panel$ranges[[1]]$x.range
+
+    if (packageVersion("ggplot2") <= "2.1.0"){
+        x = ggplot_build(obj)$panel$ranges[[1]]$y.range
+        y = ggplot_build(obj)$panel$ranges[[1]]$x.range
+    } else {
+        x = ggplot_build(obj)$layout$panel_ranges[[1]]$x.range
+        y = ggplot_build(obj)$layout$panel_ranges[[1]]$y.range
+    }
+
+
     switch(tolower(which),
-       "y" = x,
-       "x" = y,
-       "xy"= list(x = x, y = y),
+       "y" = y,
+       "x" = x,
+       "xy"= c(x,y),
+       "xy_"    = list(x = x, y = y),
+       "xy_list"= list(x = x, y = y),
        stop(sprintf("which = %s is not supported.", which))
     )
 }
 
 #' @rdname ggLims
+#'
+#' @inheritParams ggplot2::coord_cartesian
 #' @param value Values of limits: either vector of \bold{2 values} (min and max)
 #' for axis indicated in \code{which} or vector of \bold{4 values}
 #' (x min, x max, y min, y max) to be passed to function
-#' \code{\link[ggplot2]{coord_cartesian}}. \emph{NOTE}, that this function behaves differently than \code{\link[ggplot2]{lims}}.
+#' \code{\link[ggplot2]{coord_cartesian}}.
+#' \emph{NOTE}, that this function behaves differently
+#' than \code{\link[ggplot2]{lims}}.
+#'
 #' @export
-set_ggLims <- function(value, which = "y",...) {
-    if (length(value)  %!in% c(2,4)) stop("`value` must contain either 2 or 4 values.")
+
+set_ggLims <- function(value, which = "y", ..., expand = TRUE) {
+    if (!length(value) %in% c(2,4))
+        stop("`value` must contain either 2 or 4 values.")
+
     if (length(value)==4) which = "xy"
+
     switch(tolower(which),
-           "y" = coord_cartesian(ylim = value), # scale_y_continuous(limits = value),
-           "x" = coord_cartesian(xlim = value), #scale_x_continuous(limits = value),
-           "xy" = coord_cartesian(xlim = value[1:2], ylim = value[3:4]),
+           "y" = coord_cartesian(ylim = value,
+                                 expand = expand),
+           # scale_y_continuous(limits = value),
+
+           "x" = coord_cartesian(xlim = value,
+                                 expand = expand),
+           # scale_x_continuous(limits = value),
+
+           "xy" = coord_cartesian(xlim = value[1:2],
+                                  ylim = value[3:4],
+                                  expand = expand),
            stop(sprintf("which = %s is not supported.", which))
     )
 }
