@@ -1,0 +1,9 @@
+20: Linear regression  https://youtu.be/JU5yHa8Jd0Y
+
+ data(birthwt, package = "MASS")
+ 
+ 
+Regresinė analizė. Papildoma literatūra:
+1. Čekanavičius ir Murauskas. Statistika ir jos taikymai II: 123-149 psl.
+2. Venclovienė. Statistiniai metodai medicinoje. 184-200 psl.
+

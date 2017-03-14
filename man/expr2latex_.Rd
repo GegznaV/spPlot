@@ -48,9 +48,6 @@ labels(chondro)$spc  \%>\% expr2latex
 labels(chondro)$spc  \%>\% expr2latex_
 ## [1] "I / a.u."
 }
-\author{
-Vilmantas Gegzna
-}
 \seealso{
 \code{\link[simsalapar]{expr2latex}} - translate 'plotmath'
 expressions to LaTeX.\cr
@@ -59,4 +56,6 @@ expressions to LaTeX.\cr
 
 Other \pkg{spPlot} utilities: \code{\link{label_expr2text}}
 }
-
+\author{
+Vilmantas Gegzna
+}

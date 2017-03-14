@@ -57,18 +57,17 @@ p2 + facet_wl()
 
 
 }
-\author{
-Vilmantas Gegzna
-}
 \seealso{
 Function \code{\link[ggplot2]{facet_grid}} from package \pkg{ggplot2}.
-
-Other \pkg{spPlot} functions for \pkg{ggplot2}: \code{\link{ggLims}},
-  \code{\link{gg_palette}}, \code{\link{ggplot.hyperSpec}},
-  \code{\link{nTick}}
 
 Other \pkg{spPlot} functions for spectroscopy and \pkg{hyperSpec}: \code{\link{ggLims}},
   \code{\link{gg_palette}}, \code{\link{ggplot.hyperSpec}},
   \code{\link{label_expr2text}}
-}
 
+Other \pkg{spPlot} functions for \pkg{ggplot2}: \code{\link{ggLims}},
+  \code{\link{gg_palette}}, \code{\link{ggplot.hyperSpec}},
+  \code{\link{nTick}}
+}
+\author{
+Vilmantas Gegzna
+}

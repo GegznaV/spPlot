@@ -13,4 +13,3 @@
 \author{
 Vilmantas Gegzna
 }
-

@@ -4,8 +4,8 @@
 \alias{label_expr2text}
 \alias{label_expr2text.ggplot}
 \alias{label_expr2text.hyperSpec}
-\alias{label_expr2text.plotly}
 \alias{label_expr2text.plotly_hash}
+\alias{label_expr2text.plotly}
 \title{[!] Convert 'plotmath' expresions in labels to text}
 \usage{
 label_expr2text(obj, FUN = expr2latex_, ...)
@@ -63,11 +63,10 @@ chondro[1:10,,]  \%>\% qplotspc \%>\%  ggplotly \%>\% plotly_build \%>\% label_e
 
 # ==========================================================================
 }
-\author{
-Vilmantas Gegzna
-}
 \seealso{
 \code{\link{expr2latex_}}
+
+Other \pkg{spPlot} utilities: \code{\link{expr2latex_}}
 
 Other \pkg{spPlot} functions for \pkg{plotly}: \code{\link{plotly_annotation_rm}},
   \code{\link{plotly_modify_hover}},
@@ -77,7 +76,7 @@ Other \pkg{spPlot} functions for \pkg{plotly}: \code{\link{plotly_annotation_rm}
 Other \pkg{spPlot} functions for spectroscopy and \pkg{hyperSpec}: \code{\link{facet_wl}},
   \code{\link{ggLims}}, \code{\link{gg_palette}},
   \code{\link{ggplot.hyperSpec}}
-
-Other \pkg{spPlot} utilities: \code{\link{expr2latex_}}
 }
-
+\author{
+Vilmantas Gegzna
+}

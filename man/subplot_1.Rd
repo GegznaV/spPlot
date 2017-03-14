@@ -12,7 +12,9 @@ subplot_2(..., title = "Spectra and their derivatives", titleX = T,
   titleY = T, shareX = T, shareY = T, nrows = 2)
 }
 \arguments{
-\item{...}{inputs to be passed to \code{\link[plotly]{subplot}}}
+\item{...}{inputs to be passed to \code{\link[plotly]{subplot}}.}
+
+\item{title}{(string) the main title of the plot.}
 
 \item{titleX}{should x-axis titles be retained?}
 
@@ -40,4 +42,3 @@ subplot
 # ----- no examples yet -----
 
 }
-

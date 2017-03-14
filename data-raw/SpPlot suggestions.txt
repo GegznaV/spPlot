@@ -93,7 +93,6 @@ papraðyt, kad debugintø per "stack overflow"
 
 
 
-
 expression(list(lambda, nm))
 
 

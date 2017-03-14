@@ -67,9 +67,6 @@ plotly_modify_hover(obj)
 print(obj)
 
 }
-\author{
-Vilmantas Gegzna
-}
 \seealso{
 Online reference
 \url{https://plot.ly/r/reference/#scatterternary-hoverinfo}; \cr
@@ -80,4 +77,6 @@ Other \pkg{spPlot} functions for \pkg{plotly}: \code{\link{label_expr2text}},
   \code{\link{plotly_modify_legend}},
   \code{\link{plotly_tidy}}
 }
-
+\author{
+Vilmantas Gegzna
+}

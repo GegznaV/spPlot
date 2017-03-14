@@ -31,4 +31,3 @@ and \code{.row}.
 Vilmantas Gegzna
 }
 \keyword{datasets}
-

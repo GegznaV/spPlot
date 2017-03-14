@@ -72,12 +72,11 @@ ggplot(Sp2[1]) + stat_color(geom = "bar")+ scale_color_identity()
 \code{\link[hyperSpec]{qplotspc}} in package \pkg{hyperSpec}.\cr
 \code{\link[ggplot2]{ggplot}} in package \pkg{ggplot2}.
 
-Other \pkg{spPlot} functions for \pkg{ggplot2}: \code{\link{facet_wl}},
-  \code{\link{ggLims}}, \code{\link{gg_palette}},
-  \code{\link{nTick}}
-
 Other \pkg{spPlot} functions for spectroscopy and \pkg{hyperSpec}: \code{\link{facet_wl}},
   \code{\link{ggLims}}, \code{\link{gg_palette}},
   \code{\link{label_expr2text}}
-}
 
+Other \pkg{spPlot} functions for \pkg{ggplot2}: \code{\link{facet_wl}},
+  \code{\link{ggLims}}, \code{\link{gg_palette}},
+  \code{\link{nTick}}
+}

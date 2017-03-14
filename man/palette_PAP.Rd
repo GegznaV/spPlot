@@ -16,4 +16,3 @@ where colors go in a different order.
 \code{palette_PAP <- c("#4DAF4A", "#377EB8", "#F781BF","#FF7F00",  "#E41A1C", "#A65628", "#984EA3",  "#FFFF33")}
 }
 \keyword{datasets}
-

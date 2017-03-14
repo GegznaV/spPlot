@@ -97,9 +97,6 @@ plotly_modify_legend(obj, showlegend = FALSE)
 
 
 }
-\author{
-Vilmantas Gegzna
-}
 \seealso{
 Online reference \url{https://plot.ly/r/reference/#layout-legend};\cr
 Functions \link[plotly]{layout}(), \link[plotly]{plot_ly}(),
@@ -109,4 +106,6 @@ Other \pkg{spPlot} functions for \pkg{plotly}: \code{\link{label_expr2text}},
   \code{\link{plotly_modify_hover}},
   \code{\link{plotly_tidy}}
 }
-
+\author{
+Vilmantas Gegzna
+}
