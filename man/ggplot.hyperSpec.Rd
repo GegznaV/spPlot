@@ -4,11 +4,11 @@
 \alias{ggplot.hyperSpec}
 \title{[!] \code{ggplot} method for class \code{hyperSpec}}
 \usage{
-\method{ggplot}{hyperSpec}(obj, mapping = aes(), ..., wl.range = NULL,
+\method{ggplot}{hyperSpec}(data, mapping = aes(), ..., wl.range = NULL,
   palette = NULL, format = "\%g", environment)
 }
 \arguments{
-\item{obj}{\code{\link[=hyperSpec-class]{hyperSpec}} object.}
+\item{data}{A \code{hyperSpec} object}
 
 \item{mapping}{Default list of aesthetic mappings to be used for plotting.
 Default values are \code{aes_string(x = ".wavelength",
@@ -60,7 +60,8 @@ ggplot(Spectra2, wl.range = c(min ~ 320, 500~600, 700 ~ max)) +
 Sp2 <- hyAdd_color(Spectra2, "gr", c("green","green3","skyblue"))
 ggplot(Sp2, palette = TRUE) + geom_line()
 
-ggplot(Sp2, aes(color = gr), palette = c("blue","gold4","tan")) + geom_line()
+ggplot(Sp2, aes(color = gr), palette = c("blue","gold4","tan")) +
+    geom_line()
 
 ggplot(Sp2) + geom_line(aes(color = I(.color)))
 

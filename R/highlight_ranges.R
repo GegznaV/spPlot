@@ -1,3 +1,5 @@
+`%++%` <- function(a, b) {paste0(a, b)}
+
 #' Highlight wavelength ranges in a ggplot2 plot of hyperSpec object
 #'
 #' @param zones formula or list of formulas, that indicate which  zones of
@@ -19,11 +21,13 @@
 #' zones <- c(400~460, 545~670)
 #' gg + highlight_ranges(zones)
 
-highlight_ranges <- function(zones, fill = RColorBrewer::brewer.pal(9, "Set1")[1:length(zones)], alpha = 0.2 )
+highlight_ranges <- function(zones,
+                             fill = RColorBrewer::brewer.pal(9, "Set1")[1:length(zones)],
+                             alpha = 0.2 )
 
 {
     zones <- c(zones)
-    eval_("list(" %++%
+    spMisc::eval_("list(" %++%
               paste0("spZone(", zones,
                      ", fill = '", fill, "'",
                      ", alpha = ", alpha, ")",

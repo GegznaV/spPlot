@@ -108,12 +108,16 @@ get_ggLims <- function(obj, which = "y", ...) {
     } else if (packageVersion("ggplot2") <= "2.2.1") {
         x = ggplot_build(obj)$layout$panel_ranges[[1]]$x.range
         y = ggplot_build(obj)$layout$panel_ranges[[1]]$y.range
+        # Development version of ggplot
+    } else if (packageVersion("ggplot2") < "2.2.2") {
+        x = ggplot_build(obj)$layout$panel_scales_x[[1]]$range$range
+        y = ggplot_build(obj)$layout$panel_scales_y[[1]]$range$range
+
     } else {
         # Atnaujinti pagal naujesnę ggplot versiją
-        x = ggplot_build(obj)$layout$panel_ranges[[1]]$x.range
-        y = ggplot_build(obj)$layout$panel_ranges[[1]]$y.range
+        x = ggplot_build(obj)$layout$panel_scales_x[[1]]$range$range
+        y = ggplot_build(obj)$layout$panel_scales_y[[1]]$range$range
     }
-
 
     switch(tolower(which),
        "y"  = y,

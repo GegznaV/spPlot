@@ -46,7 +46,9 @@
 #' library(plotly)
 #'
 #' # Create `plotly` object:
-#' obj <- qplot_spStat(chondro,"clusters",mean)  %>% ggplotly()
+#' obj <- qplot_spStat(chondro,"clusters",mean)  %>%
+#'        label_expr2text() %>%
+#'        ggplotly()
 #'
 #'
 #' # Then compare hover in this plot:

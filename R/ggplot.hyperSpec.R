@@ -4,9 +4,7 @@
 #' Method to create a new \code{ggplot} object for class \code{hyperSpec}.
 #' More details in \code{\link[ggplot2]{ggplot}}.
 #'
-#' @method ggplot hyperSpec
-#'
-#' @template obj-hy
+#' @param data A \code{hyperSpec} object
 #'
 #' @param wl.range wavelength ranges to plot. The ranges will be plotted
 #'  as separate columns of facets. Examples in \code{\link[hyperSpec]{wl2i}}
@@ -33,6 +31,7 @@
 #'
 #'
 #' @template ggplot
+#' @method ggplot hyperSpec
 #' @export
 #'
 #' @param mapping Default list of aesthetic mappings to be used for plotting.
@@ -64,7 +63,8 @@
 #' Sp2 <- hyAdd_color(Spectra2, "gr", c("green","green3","skyblue"))
 #' ggplot(Sp2, palette = TRUE) + geom_line()
 #'
-#' ggplot(Sp2, aes(color = gr), palette = c("blue","gold4","tan")) + geom_line()
+#' ggplot(Sp2, aes(color = gr), palette = c("blue","gold4","tan")) +
+#'     geom_line()
 #'
 #' ggplot(Sp2) + geom_line(aes(color = I(.color)))
 #'
@@ -73,15 +73,15 @@
 #' ggplot(Sp2[1]) + stat_color(geom = "bar")+ scale_color_identity()
 
 
-ggplot.hyperSpec <- function (obj, mapping = aes(),
+ggplot.hyperSpec <- function(data, mapping = aes(),
                               ...,
                               wl.range = NULL,
                               palette = NULL,
                               format = "%g",
                               environment)
 {
-    chk.hy(obj)
-    validObject(obj)
+    chk.hy(data)
+    validObject(data)
 
     force(palette)
     force(format)
@@ -92,7 +92,7 @@ ggplot.hyperSpec <- function (obj, mapping = aes(),
                           mapping)
 
     if (identical(palette,TRUE)){
-        palette <- hyGet_palette0(obj)
+        palette <- hyGet_palette0(data)
         if (!is.null(palette)) {
             col_VAR   <- attributes(palette)$var_name
             col_LABEL <- attributes(palette)$var_label
@@ -109,8 +109,10 @@ ggplot.hyperSpec <- function (obj, mapping = aes(),
     # If `wl.range` is provided a subset of object is taken
     if (!is.null(wl.range))   {
         wl.range <- c(wl.range) # Convert to list
-        obj_list <- lapply(wl.range, extract_wl_ranges,
-                           obj = obj, format = format)
+        obj_list <- lapply(wl.range,
+                           extract_wl_ranges,
+                           obj = data,
+                           format = format)
         # Transform to data frame
         DF <- lapply(obj_list, as_longDF_and_rm_NA) %>% Reduce(rbind, .)
 
@@ -118,7 +120,7 @@ ggplot.hyperSpec <- function (obj, mapping = aes(),
         # if `wl.range` is missing whole dataset is used
 
         # Transform to data frame
-        DF <- as_longDF_and_rm_NA(obj)
+        DF <- as_longDF_and_rm_NA(data)
     }
 
     # Make ggplot
@@ -127,8 +129,8 @@ ggplot.hyperSpec <- function (obj, mapping = aes(),
 
     # Modify x and y axis labels in ggplot
     p <- p +
-          xlab(hyperSpec::labels(obj, ".wavelength")) +
-          ylab(hyperSpec::labels(obj, "spc"))
+          xlab(hyperSpec::labels(data, ".wavelength")) +
+          ylab(hyperSpec::labels(data, "spc"))
 
     # Use facetting if two or more wl.ranges are selected
     if (!is.null(wl.range) & length(wl.range) > 1) {
@@ -137,10 +139,10 @@ ggplot.hyperSpec <- function (obj, mapping = aes(),
 
     # Add color palette
 
-    # if (identical(palette,TRUE)) palette <- hyGet_palette0(obj)
+    # if (identical(palette,TRUE)) palette <- hyGet_palette0(data)
     if (length(palette) > 0 & !identical(palette,FALSE)) {
 
-        p <- p + gg_palette(obj, palette)
+        p <- p + gg_palette(data, palette)
 
         # p <- p + scale_color_manual(values = palette) +
         #           scale_fill_manual(values = palette)

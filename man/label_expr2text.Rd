@@ -44,23 +44,27 @@ library(plotly)
 labels(chondro)
 labels(label_expr2text(chondro))
 
-# without `label_expr2text` labels with expressions are distorted"
-chondro[1:10,,] \%>\% qplotspc \%>\% ggplotly
+\dontrun{\donttest{
+# without `label_expr2text` labels with expressions are distorted or not plotted at all:
 
+chondro[1:10,,] \%>\% qplotspc \%>\% ggplotly
+}}
 # If function `label_expr2text` is applied:
 chondro[1:10,,] \%>\% label_expr2text  \%>\% qplotspc \%>\% ggplotly
 
 
 # ===== for ggplot2 object =================================================
 
-chondro[1:10,,]  \%>\% qplotspc \%>\% label_expr2text \%>\% ggplotly
+chondro[1:10,,] \%>\% qplotspc \%>\% label_expr2text \%>\% ggplotly
 
 
 # ===== for plotly object ==================================================
 
 chondro[1:10,,]  \%>\% qplotspc \%>\%  ggplotly \%>\% label_expr2text
+\dontrun{\donttest{
+## Does not work with newer version of `plotly`:
 chondro[1:10,,]  \%>\% qplotspc \%>\%  ggplotly \%>\% plotly_build \%>\% label_expr2text
-
+}}
 # ==========================================================================
 }
 \seealso{

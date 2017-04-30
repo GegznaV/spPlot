@@ -1,0 +1,35 @@
+1  No.85	3 ir (6 timeseries),   		nr: 70-79
+2  No.20	
+3  No.49	?5 mažo intensyvumo 		nr: 278
+4  No.23	?4 pikas ties 380
+5  No.02	
+6  No.72	6 mažo intensyvumo 			nr: 400
+7  No.06	
+8  No.52	?3
+9  No.08	
+10 No.86	?1
+11 No.30	
+12 No.09	
+13 No.33	?6, 1 mažo intensyvumo nr: 
+14 No.34	
+15 No.87	<--- (5 be filtro, 5 su filtru)			nr: 492, 494
+16 No.58	5 pikas ties 380               
+17 No.59	
+18 No.80	
+19 No.11	<--- tas pats mėginys kartojasi keliuose mėgintuvėliuose; mažo intensyvumo 		nr: 61
+20 No.36	
+21 No.37	7 nėra intensyvumo  	nr: 212
+22 No.38	? 8,6,1
+23 No.63	
+24 No.13	
+25 No.14	3 (USB2000 užsisotinęs) nr: 86
+26 No.15	
+27 No.43	2, 6 abu per mažo intensyvumo nr: 247, 245
+28 No.81	
+29 No.91	
+30 No.16	
+31 No.17	
+32 No.45	5 mažo intensyvumo nr: 257
+33 No.82	
+
+70:79, 278, 400, 492, 494, 61, 212, 86, 247, 245, 257
