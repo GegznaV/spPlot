@@ -1,3 +1,4 @@
+
 ---
 output: github_document
 ---
@@ -20,6 +21,12 @@ knitr::opts_chunk$set(
 [![Last-update](https://img.shields.io/badge/Updated%20on-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](/commits/master)
 
 ***
+  
+
+```{r, fig.align='center', out.height='30%', out.width='30%',echo=FALSE}
+knitr::include_graphics("https://raw.githubusercontent.com/GegznaV/spPlot/master/docs/logo.png")
+```
+
   
 Development version of package `spPlot` 
 ==========================================
