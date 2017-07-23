@@ -4,13 +4,13 @@
 #' @param obj Eithar a ggplot object (for getting the limits) or a numeric
 #'           vector with limits (for setting the limits).
 #'            If values of limits: either vector of \bold{2 values} (min and max)
-#'            for axis indicated in \code{which} or vector of \bold{4 values}
+#'            for axis indicated in \code{axis} or vector of \bold{4 values}
 #'           (x min, x max, y min, y max) to be passed to function
 #'           \code{\link[ggplot2]{coord_cartesian}}.
 #'           \emph{NOTE}, that this function \code{ggLims} behaves differently
 #'           than \code{\link[ggplot2]{lims}}.
 #'
-#' @param which (A string) either "x", "y" (default) or "xy" which
+#' @param axis (A string) either "x", "y" (default) or "xy" axis
 #'        indicates axis if inerest.\cr
 #'        In case of "set_ggLims" following inputs are also possible if a list
 #'        should be returned: "xy_" or "xy_list".
@@ -78,29 +78,29 @@
 #' @family \pkg{spPlot} functions for spectroscopy and \pkg{hyperSpec}
 #' @family \pkg{spPlot} functions for \pkg{ggplot2}
 
-ggLims <- function(obj, which = "y", ...){
+ggLims <- function(obj, axis = "y", ...){
     UseMethod("ggLims")
 }
 
 #' @rdname ggLims
 #' @export
 #' @method ggLims gg
-ggLims.gg <- function(obj, which = "y", ...){
-    get_ggLims(obj, which)
+ggLims.gg <- function(obj, axis = "y", ...){
+    get_ggLims(obj, axis)
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname ggLims
 #' @export
 #' @method ggLims numeric
-ggLims.numeric <- function(obj, which = "y", ...){
-    set_ggLims(obj, which)
+ggLims.numeric <- function(obj, axis = "y", ...){
+    set_ggLims(obj, axis)
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname ggLims
 #' @export
-get_ggLims <- function(obj, which = "y", ...) {
+get_ggLims <- function(obj, axis = "y", ...) {
 
     if (packageVersion("ggplot2") <= "2.1.0") {
         x = ggplot_build(obj)$panel$ranges[[1]]$y.range
@@ -110,22 +110,25 @@ get_ggLims <- function(obj, which = "y", ...) {
         y = ggplot_build(obj)$layout$panel_ranges[[1]]$y.range
         # Development version of ggplot
     } else if (packageVersion("ggplot2") < "2.2.2") {
-        x = ggplot_build(obj)$layout$panel_scales_x[[1]]$range$range
-        y = ggplot_build(obj)$layout$panel_scales_y[[1]]$range$range
+        x = ggplot_build(obj)$layout$panel_params[[1]]$x.range
+        y = ggplot_build(obj)$layout$panel_params[[1]]$y.range
+
+        # x = ggplot_build(obj)$layout$panel_scales_x[[1]]$range$range
+        # y = ggplot_build(obj)$layout$panel_scales_y[[1]]$range$range
 
     } else {
         # Atnaujinti pagal naujesnę ggplot versiją
-        x = ggplot_build(obj)$layout$panel_scales_x[[1]]$range$range
-        y = ggplot_build(obj)$layout$panel_scales_y[[1]]$range$range
+        x = ggplot_build(obj)$layout$panel_params[[1]]$x.range
+        y = ggplot_build(obj)$layout$panel_params[[1]]$y.range
     }
 
-    switch(tolower(which),
+    switch(tolower(axis),
        "y"  = y,
        "x"  = x,
        "xy" = c(x,y),
        "xy_"     = list(x = x, y = y),
        "xy_list" = list(x = x, y = y),
-       stop(sprintf("which = %s is not supported.", which))
+       stop(sprintf("`axis = %s` is not supported.", axis))
     )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -133,13 +136,13 @@ get_ggLims <- function(obj, which = "y", ...) {
 #'
 #' @inheritParams ggplot2::coord_cartesian
 #' @export
-set_ggLims <- function(obj, which = "y", ..., expand = TRUE) {
+set_ggLims <- function(obj, axis = "y", ..., expand = TRUE) {
     if (!length(obj) %in% c(2, 4))
         stop("`obj` must contain either 2 or 4 values.")
 
-    if (length(obj) == 4) which = "xy"
+    if (length(obj) == 4) axis = "xy"
 
-    switch(tolower(which),
+    switch(tolower(axis),
            "y" = coord_cartesian(ylim = obj,
                                  expand = expand),
            # scale_y_continuous(limits = obj),
@@ -151,7 +154,7 @@ set_ggLims <- function(obj, which = "y", ..., expand = TRUE) {
            "xy" = coord_cartesian(xlim = obj[1:2],
                                   ylim = obj[3:4],
                                   expand = expand),
-           stop(sprintf("which = %s is not supported.", which))
+           stop(sprintf("axis = %s is not supported.", axis))
     )
 }
 

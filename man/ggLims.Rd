@@ -8,27 +8,27 @@
 \alias{set_ggLims}
 \title{[!] Convenience functions to get and set the axis limits in ggplot2 object}
 \usage{
-ggLims(obj, which = "y", ...)
+ggLims(obj, axis = "y", ...)
 
-\method{ggLims}{gg}(obj, which = "y", ...)
+\method{ggLims}{gg}(obj, axis = "y", ...)
 
-\method{ggLims}{numeric}(obj, which = "y", ...)
+\method{ggLims}{numeric}(obj, axis = "y", ...)
 
-get_ggLims(obj, which = "y", ...)
+get_ggLims(obj, axis = "y", ...)
 
-set_ggLims(obj, which = "y", ..., expand = TRUE)
+set_ggLims(obj, axis = "y", ..., expand = TRUE)
 }
 \arguments{
 \item{obj}{Eithar a ggplot object (for getting the limits) or a numeric
 vector with limits (for setting the limits).
  If values of limits: either vector of \bold{2 values} (min and max)
- for axis indicated in \code{which} or vector of \bold{4 values}
+ for axis indicated in \code{axis} or vector of \bold{4 values}
 (x min, x max, y min, y max) to be passed to function
 \code{\link[ggplot2]{coord_cartesian}}.
 \emph{NOTE}, that this function \code{ggLims} behaves differently
 than \code{\link[ggplot2]{lims}}.}
 
-\item{which}{(A string) either "x", "y" (default) or "xy" which
+\item{axis}{(A string) either "x", "y" (default) or "xy" axis
 indicates axis if inerest.\cr
 In case of "set_ggLims" following inputs are also possible if a list
 should be returned: "xy_" or "xy_list".}
