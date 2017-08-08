@@ -12,8 +12,8 @@ rows of facets. The dot "." (default) is used to indicate that there should
 be no faceting on this dimension.}
 
 \item{space}{If \code{"fixed"}, the default, all panels have the same size.
- If \code{"free_y"} their height will be proportional to the length of the
- y scale; if \code{"free_x"} their width will be proportional to the
+If \code{"free_y"} their height will be proportional to the length of the
+y scale; if \code{"free_x"} their width will be proportional to the
 length of the x scale; or if \code{"free"} both height and width will
 vary.  This setting has no effect unless the appropriate scales also vary.}
 

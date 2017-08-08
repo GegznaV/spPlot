@@ -3,8 +3,8 @@ Type: Package
 Title: Plotting and Helper Functions for `hyperSpec`, `ggplot2` and `plotly`
 Description: Various plotting functions, convenience plotting functions and
              extesions for packages `hyperSpec`, `ggplot2` and `plotly`.
-Version: 0.0.16
-Date: 2017-05-11
+Version: 0.0.16.9001
+Date: 2017-08-08
 Encoding: UTF-8
 Authors@R: person("Vilmantas", "Gegzna", email = "GegznaV@gmail.com", role = c("aut", "cre"))
 Maintainer: Vilmantas Gegzna <GegeznaV@gmail.com>
@@ -34,6 +34,7 @@ Imports:
     devtools,
     dplyr,
     ggspectra,
+    glue,
     grDevices,
     graphics,
     htmltools,

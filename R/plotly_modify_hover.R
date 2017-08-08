@@ -133,12 +133,12 @@ update_text <- function(in_text, replace_with = list()){
 
     # Add \\ to treat special symbols as symbols
     FROM <- gsub("([\\^\\$\\{\\}\\[\\]\\(\\)\\.\\*\\+\\?\\<\\>\\&\\|\\\\])",
-               "\\\\\\\\\\1", FROM, perl=TRUE)
+                 "\\\\\\\\\\1", FROM, perl = TRUE)
     # Create pattern
-    FROM_as_patern  <- paste0("(<br>)?(",FROM,")(:)")
+    FROM_as_patern  <- glue::glue("(<br>)?({FROM})(:)")
 
     # Replace
-    eval_(paste0("txt <- gsub('",FROM_as_patern,"','\\\\1",TO,"\\\\3', txt)"))
+    spMisc::eval_glue("txt <- gsub('{FROM_as_patern}','\\\\1{TO}\\\\3', txt)")
 
     # Return results
     return(txt)
