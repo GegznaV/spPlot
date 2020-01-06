@@ -114,11 +114,11 @@ update_text <- function(in_text, replace_with = list()){
 
     # Choose default values or selected values to update
     replace_with <- modifyList(list(
-               ".wavelength"     = "Wavelength",
-                    "spc"        = "Y axis value",
-                    ".rownames"  = "Row",
-                    ".aggregate" = "Group"),
-               replace_with)
+        ".wavelength" = "Wavelength",
+        "spc"         = "Y axis value",
+        ".rownames"   = "Row",
+        ".aggregate"  = "Group"),
+        replace_with)
 
     # Convert to vector
     replace_with %<>% simplify2array
@@ -129,7 +129,7 @@ update_text <- function(in_text, replace_with = list()){
 
     # Remove duplicated entries
     # txt <- gsub("(.*)(<br>.+)(<br>)?.*(?:\\2)","\\1\\2", in_text)
-    txt <- gsub("(.*)(<br>.+)(<br>).*(?:\\2)","\\1\\2", in_text)
+    txt <- gsub("(.*)(<br>.+)(<br>).*(?:\\2)", "\\1\\2", in_text)
 
     # Add \\ to treat special symbols as symbols
     FROM <- gsub("([\\^\\$\\{\\}\\[\\]\\(\\)\\.\\*\\+\\?\\<\\>\\&\\|\\\\])",
