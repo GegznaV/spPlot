@@ -70,17 +70,24 @@ chondro[1:10,,]  \%>\% qplotspc \%>\%  ggplotly \%>\% plotly_build \%>\% label_e
 \seealso{
 \code{\link{expr2latex_}}
 
-Other \pkg{spPlot} utilities: \code{\link{expr2latex_}}
+Other \pkg{spPlot} utilities: 
+\code{\link{expr2latex_}()}
 
-Other \pkg{spPlot} functions for \pkg{plotly}: \code{\link{plotly_annotation_rm}},
-  \code{\link{plotly_modify_hover}},
-  \code{\link{plotly_modify_legend}},
-  \code{\link{plotly_tidy}}
+Other \pkg{spPlot} functions for \pkg{plotly}: 
+\code{\link{plotly_annotation_rm}()},
+\code{\link{plotly_modify_hover}()},
+\code{\link{plotly_modify_legend}()},
+\code{\link{plotly_tidy}()}
 
-Other \pkg{spPlot} functions for spectroscopy and \pkg{hyperSpec}: \code{\link{facet_wl}},
-  \code{\link{ggLims}}, \code{\link{gg_palette}},
-  \code{\link{ggplot.hyperSpec}}
+Other \pkg{spPlot} functions for spectroscopy and \pkg{hyperSpec}: 
+\code{\link{facet_wl}()},
+\code{\link{ggLims}()},
+\code{\link{gg_palette}()},
+\code{\link{ggplot.hyperSpec}()}
 }
 \author{
 Vilmantas Gegzna
 }
+\concept{\pkg{spPlot} functions for \pkg{plotly}}
+\concept{\pkg{spPlot} functions for spectroscopy and \pkg{hyperSpec}}
+\concept{\pkg{spPlot} utilities}

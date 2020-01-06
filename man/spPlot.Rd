@@ -3,7 +3,6 @@
 \docType{package}
 \name{spPlot}
 \alias{spPlot}
-\alias{spPlot-package}
 \title{Various ploting functions for `hyperSpec`, `ggplot2`, `plotly`, etc}
 \description{
 [+] - function is well described. \cr

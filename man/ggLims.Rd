@@ -101,14 +101,20 @@ obj + ylim(c(0, 5))
 \seealso{
 \code{\link[ggplot2]{lims}}
 
-Other \pkg{spPlot} functions for spectroscopy and \pkg{hyperSpec}: \code{\link{facet_wl}},
-  \code{\link{gg_palette}}, \code{\link{ggplot.hyperSpec}},
-  \code{\link{label_expr2text}}
+Other \pkg{spPlot} functions for spectroscopy and \pkg{hyperSpec}: 
+\code{\link{facet_wl}()},
+\code{\link{gg_palette}()},
+\code{\link{ggplot.hyperSpec}()},
+\code{\link{label_expr2text}()}
 
-Other \pkg{spPlot} functions for \pkg{ggplot2}: \code{\link{facet_wl}},
-  \code{\link{gg_palette}}, \code{\link{ggplot.hyperSpec}},
-  \code{\link{nTick}}
+Other \pkg{spPlot} functions for \pkg{ggplot2}: 
+\code{\link{facet_wl}()},
+\code{\link{gg_palette}()},
+\code{\link{ggplot.hyperSpec}()},
+\code{\link{nTick}}
 }
 \author{
 Vilmantas Gegzna
 }
+\concept{\pkg{spPlot} functions for \pkg{ggplot2}}
+\concept{\pkg{spPlot} functions for spectroscopy and \pkg{hyperSpec}}

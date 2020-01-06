@@ -59,11 +59,13 @@ before the sequence described above but does not remove annotations.
           \link[plotly]{subplot}(),
           \link[ggplot2]{ggplot}().
 
-Other \pkg{spPlot} functions for \pkg{plotly}: \code{\link{label_expr2text}},
-  \code{\link{plotly_annotation_rm}},
-  \code{\link{plotly_modify_hover}},
-  \code{\link{plotly_modify_legend}}
+Other \pkg{spPlot} functions for \pkg{plotly}: 
+\code{\link{label_expr2text}()},
+\code{\link{plotly_annotation_rm}()},
+\code{\link{plotly_modify_hover}()},
+\code{\link{plotly_modify_legend}()}
 }
 \author{
 Vilmantas Gegzna
 }
+\concept{\pkg{spPlot} functions for \pkg{plotly}}

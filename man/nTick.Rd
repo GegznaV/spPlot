@@ -47,10 +47,13 @@ p + nTick_x(2) + nTick_y(8)
 \seealso{
 Pretty breakpoints: \code{\link[base]{pretty}}.
 
-Other \pkg{spPlot} functions for \pkg{ggplot2}: \code{\link{facet_wl}},
-  \code{\link{ggLims}}, \code{\link{gg_palette}},
-  \code{\link{ggplot.hyperSpec}}
+Other \pkg{spPlot} functions for \pkg{ggplot2}: 
+\code{\link{facet_wl}()},
+\code{\link{ggLims}()},
+\code{\link{gg_palette}()},
+\code{\link{ggplot.hyperSpec}()}
 }
 \author{
 Vilmantas Gegzna
 }
+\concept{\pkg{spPlot} functions for \pkg{ggplot2}}

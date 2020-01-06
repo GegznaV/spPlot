@@ -4,8 +4,11 @@
 \alias{highlight_ranges}
 \title{Highlight wavelength ranges in a ggplot2 plot of hyperSpec object}
 \usage{
-highlight_ranges(zones, fill = RColorBrewer::brewer.pal(9,
-  "Set1")[1:length(zones)], alpha = 0.2)
+highlight_ranges(
+  zones,
+  fill = RColorBrewer::brewer.pal(9, "Set1")[1:length(zones)],
+  alpha = 0.2
+)
 }
 \arguments{
 \item{zones}{formula or list of formulas, that indicate which  zones of

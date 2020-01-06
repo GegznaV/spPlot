@@ -58,11 +58,13 @@ plotly_annotation_rm(obj)
 
 }
 \seealso{
-Other \pkg{spPlot} functions for \pkg{plotly}: \code{\link{label_expr2text}},
-  \code{\link{plotly_modify_hover}},
-  \code{\link{plotly_modify_legend}},
-  \code{\link{plotly_tidy}}
+Other \pkg{spPlot} functions for \pkg{plotly}: 
+\code{\link{label_expr2text}()},
+\code{\link{plotly_modify_hover}()},
+\code{\link{plotly_modify_legend}()},
+\code{\link{plotly_tidy}()}
 }
 \author{
 Vilmantas Gegzna
 }
+\concept{\pkg{spPlot} functions for \pkg{plotly}}

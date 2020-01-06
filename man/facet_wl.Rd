@@ -19,7 +19,7 @@ vary.  This setting has no effect unless the appropriate scales also vary.}
 
 \item{scales}{Are scales shared across all facets (the default,
 \code{"fixed"}), or do they vary across rows (\code{"free_x"}),
-columns (\code{"free_y"}), or both rows and columns (\code{"free"})}
+columns (\code{"free_y"}), or both rows and columns (\code{"free"})?}
 
 \item{...}{Further parameters to be passed to \code{\link[ggplot2]{facet_grid}}.}
 }
@@ -60,14 +60,20 @@ p2 + facet_wl()
 \seealso{
 Function \code{\link[ggplot2]{facet_grid}} from package \pkg{ggplot2}.
 
-Other \pkg{spPlot} functions for spectroscopy and \pkg{hyperSpec}: \code{\link{ggLims}},
-  \code{\link{gg_palette}}, \code{\link{ggplot.hyperSpec}},
-  \code{\link{label_expr2text}}
+Other \pkg{spPlot} functions for spectroscopy and \pkg{hyperSpec}: 
+\code{\link{ggLims}()},
+\code{\link{gg_palette}()},
+\code{\link{ggplot.hyperSpec}()},
+\code{\link{label_expr2text}()}
 
-Other \pkg{spPlot} functions for \pkg{ggplot2}: \code{\link{ggLims}},
-  \code{\link{gg_palette}}, \code{\link{ggplot.hyperSpec}},
-  \code{\link{nTick}}
+Other \pkg{spPlot} functions for \pkg{ggplot2}: 
+\code{\link{ggLims}()},
+\code{\link{gg_palette}()},
+\code{\link{ggplot.hyperSpec}()},
+\code{\link{nTick}}
 }
 \author{
 Vilmantas Gegzna
 }
+\concept{\pkg{spPlot} functions for \pkg{ggplot2}}
+\concept{\pkg{spPlot} functions for spectroscopy and \pkg{hyperSpec}}

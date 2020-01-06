@@ -4,8 +4,13 @@
 \alias{plotly_modify_hover}
 \title{[!] Modify hover in a \code{plotly} object}
 \usage{
-plotly_modify_hover(obj, new_text = list(), hovermode = NULL,
-  hoverinfo = NULL, hoverformat = NULL)
+plotly_modify_hover(
+  obj,
+  new_text = list(),
+  hovermode = NULL,
+  hoverinfo = NULL,
+  hoverformat = NULL
+)
 }
 \arguments{
 \item{obj}{a \pkg{plotly} object (created with function \code{plot_ly},
@@ -74,11 +79,13 @@ Online reference
 \url{https://plot.ly/r/reference/#scatterternary-hoverinfo}; \cr
 Functions \link[plotly]{layout}(), \link[plotly]{plot_ly}(),
 
-Other \pkg{spPlot} functions for \pkg{plotly}: \code{\link{label_expr2text}},
-  \code{\link{plotly_annotation_rm}},
-  \code{\link{plotly_modify_legend}},
-  \code{\link{plotly_tidy}}
+Other \pkg{spPlot} functions for \pkg{plotly}: 
+\code{\link{label_expr2text}()},
+\code{\link{plotly_annotation_rm}()},
+\code{\link{plotly_modify_legend}()},
+\code{\link{plotly_tidy}()}
 }
 \author{
 Vilmantas Gegzna
 }
+\concept{\pkg{spPlot} functions for \pkg{plotly}}

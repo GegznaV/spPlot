@@ -43,7 +43,7 @@ labels(chondro)$spc
   ## expression("I / a.u.")
 
 labels(chondro)$spc  \%>\% expr2latex
-## [1] "\\"I / a.u.\\""
+## [1] "\"I / a.u.\""
 
 labels(chondro)$spc  \%>\% expr2latex_
 ## [1] "I / a.u."
@@ -54,8 +54,10 @@ expressions to LaTeX.\cr
 \code{\link{label_expr2text}} remove expresions from labels of \code{ggplot2},
 \code{hyperSpec} and \code{plotly} objects.
 
-Other \pkg{spPlot} utilities: \code{\link{label_expr2text}}
+Other \pkg{spPlot} utilities: 
+\code{\link{label_expr2text}()}
 }
 \author{
 Vilmantas Gegzna
 }
+\concept{\pkg{spPlot} utilities}

@@ -5,11 +5,24 @@
 \alias{subplot_2}
 \title{Wrapper functions for plotly::subplot}
 \usage{
-subplot_1(..., title = "Spectra and their derivatives", titleX = T,
-  titleY = T, shareY = T, nrows = 1)
+subplot_1(
+  ...,
+  title = "Spectra and their derivatives",
+  titleX = T,
+  titleY = T,
+  shareY = T,
+  nrows = 1
+)
 
-subplot_2(..., title = "Spectra and their derivatives", titleX = T,
-  titleY = T, shareX = T, shareY = T, nrows = 2)
+subplot_2(
+  ...,
+  title = "Spectra and their derivatives",
+  titleX = T,
+  titleY = T,
+  shareX = T,
+  shareY = T,
+  nrows = 2
+)
 }
 \arguments{
 \item{...}{inputs to be passed to \code{\link[plotly]{subplot}}.}

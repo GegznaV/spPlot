@@ -8,11 +8,9 @@
 \usage{
 gg_barplot(x, data, alpha = 1, color = "black", drop_NA = FALSE, ...)
 
-\method{gg_barplot}{hyperSpec}(x, data, alpha = 1, color = "black",
-  drop_NA = FALSE, ...)
+\method{gg_barplot}{hyperSpec}(x, data, alpha = 1, color = "black", drop_NA = FALSE, ...)
 
-\method{gg_barplot}{default}(x, data, alpha = 1, color = "black",
-  drop_NA = FALSE, ...)
+\method{gg_barplot}{default}(x, data, alpha = 1, color = "black", drop_NA = FALSE, ...)
 }
 \arguments{
 \item{x}{(string) A name of factor variable in the data frame.}

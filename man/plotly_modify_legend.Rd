@@ -4,11 +4,28 @@
 \alias{plotly_modify_legend}
 \title{[!] Modify legend of a \code{plotly} object}
 \usage{
-plotly_modify_legend(obj, showlegend = NULL, traceorder = NULL,
-  bgcolor = NULL, bordercolor = NULL, borderwidth = NULL,
-  fontcolor = NULL, fontfamily = NULL, fontsize = NULL, x = NULL,
-  y = NULL, yanchor = NULL, xanchor = NULL, tracegroupgap = NULL,
-  orientation = NULL, rm_repText = TRUE, unique.legend = TRUE, ...)
+plotly_modify_legend(
+  obj,
+  showlegend = NULL,
+  traceorder = NULL,
+  bgcolor = NULL,
+  bordercolor = NULL,
+  borderwidth = NULL,
+  fontcolor = NULL,
+  fontfamily = NULL,
+  fontsize = NULL,
+  x = NULL,
+  y = NULL,
+  yanchor = NULL,
+  xanchor = NULL,
+  tracegroupgap = NULL,
+  orientation = NULL,
+  rm_rep_text = TRUE,
+  rm_nonfirst_gr = TRUE,
+  unique.legend = TRUE,
+  ...,
+  rm_repText = rm_rep_text
+)
 }
 \arguments{
 \item{obj}{a \pkg{plotly} object (created with function \code{plot_ly},
@@ -52,8 +69,12 @@ Determines the order at which the legend items are displayed. If "normal",
 \item{orientation}{"v","h". If \code{NULL} (default) value of this option will not be changed.
 Described in \href{https://plot.ly/r/reference/#layout-legend}{R plotly reference}.}
 
-\item{rm_repText}{Logical. If \code{TRUE} (default), repeated text in
+\item{rm_rep_text, rm_repText}{(logical) If \code{TRUE} (default), repeated text in
 legend's label is removed.}
+
+\item{rm_nonfirst_gr}{(logical) If \code{TRUE} (default), non-first groups in
+legend's label is removed,
+e.g., "(ratio = 1.8,1,NA)" is converted to "ratio = 1.8".}
 
 \item{unique.legend}{logical. If \code{TRUE} (default), only one legend per
 legend group is shown. Result is visible if function
@@ -82,9 +103,9 @@ library(hyperSpec)
 library(plotly)
 
 # Create `plotly` object:
-obj <- qplot_spStat(chondro,"clusters",mean) \%>\%
-          label_expr2text() \%>\%
-           ggplotly()
+obj <- qplot_spStat(chondro, "clusters", mean) \%>\%
+   label_expr2text() \%>\%
+   ggplotly()
 
 # Then compare this plot:
 plotly_modify_legend(obj)
@@ -103,11 +124,13 @@ plotly_modify_legend(obj, showlegend = FALSE)
 Online reference \url{https://plot.ly/r/reference/#layout-legend};\cr
 Functions \link[plotly]{layout}(), \link[plotly]{plot_ly}(),
 
-Other \pkg{spPlot} functions for \pkg{plotly}: \code{\link{label_expr2text}},
-  \code{\link{plotly_annotation_rm}},
-  \code{\link{plotly_modify_hover}},
-  \code{\link{plotly_tidy}}
+Other \pkg{spPlot} functions for \pkg{plotly}: 
+\code{\link{label_expr2text}()},
+\code{\link{plotly_annotation_rm}()},
+\code{\link{plotly_modify_hover}()},
+\code{\link{plotly_tidy}()}
 }
 \author{
 Vilmantas Gegzna
 }
+\concept{\pkg{spPlot} functions for \pkg{plotly}}
