@@ -47,8 +47,12 @@
 #'
 #' @param yanchor Described in \href{https://plot.ly/r/reference/#layout-legend}{R plotly reference}.
 #' @param xanchor Described in \href{https://plot.ly/r/reference/#layout-legend}{R plotly reference}.
-#' @param rm_repText Logical. If \code{TRUE} (default), repeated text in
+#' @param rm_rep_text,rm_repText (logical) If \code{TRUE} (default), repeated text in
 #' legend's label is removed.
+#' @param rm_nonfirst_gr (logical) If \code{TRUE} (default), non-first groups in
+#' legend's label is removed,
+#' e.g., "(ratio = 1.8,1,NA)" is converted to "ratio = 1.8".
+#'
 #'
 #' @template plotly-updated
 #' @export
@@ -60,9 +64,9 @@
 #' library(plotly)
 #'
 #' # Create `plotly` object:
-#' obj <- qplot_spStat(chondro,"clusters",mean) %>%
-#'           label_expr2text() %>%
-#'            ggplotly()
+#' obj <- qplot_spStat(chondro, "clusters", mean) %>%
+#'    label_expr2text() %>%
+#'    ggplotly()
 #'
 #' # Then compare this plot:
 #' plotly_modify_legend(obj)
@@ -97,9 +101,13 @@ plotly_modify_legend <- function(obj,
                                  xanchor         = NULL,
                                  tracegroupgap   = NULL,
                                  orientation     = NULL,
-                                 rm_repText      = TRUE,
+                                 rm_rep_text     = TRUE,
+                                 rm_nonfirst_gr  = TRUE,
                                  unique.legend   = TRUE,
-                                 ...){
+                                 ...,
+
+                                 # Deprecated value
+                                 rm_repText      = rm_rep_text){
 
     # Convert plotly object to editable object
     obj <- plotly::plotly_build(obj)
@@ -107,7 +115,7 @@ plotly_modify_legend <- function(obj,
     # Corrections
     if (!is.null(showlegend))   {obj$x$layout$showlegend           <- as.logical(showlegend)}
     if (!is.null(orientation))  {obj$x$layout$legend$orientation   <- match.arg(orientation, c("v", "h"))}
-    if (!is.null(traceorder))   {obj$x$layout$legend$traceorder    <- match.arg(traceorder, c( "normal", "reversed", "grouped", "reversed+grouped","grouped+reversed"))}
+    if (!is.null(traceorder))   {obj$x$layout$legend$traceorder    <- match.arg(traceorder, c( "normal", "reversed", "grouped", "reversed+grouped", "grouped+reversed"))}
     if (!is.null(bgcolor))      {obj$x$layout$legend$bgcolor       <- bgcolor}
     if (!is.null(bordercolor))  {obj$x$layout$legend$bordercolor   <- bordercolor}
     if (!is.null(borderwidth))  {obj$x$layout$legend$borderwidth   <- borderwidth}
@@ -125,16 +133,39 @@ plotly_modify_legend <- function(obj,
     LEN <- length(obj$x$data)
 
     # Remove repeated text in legend labels and legend group names
-    if (rm_repText == TRUE){
+    if (rm_repText == TRUE) {
         # Function to correct text in labels: extract relevant nonrepeated information
         rm_repeated <- function(TXT) gsub("\\((.+?)(?:,\\1)+\\)", "\\1", TXT, perl = T)
 
         # Apply the function
         for (i in 1:LEN) {
-            obj$x$data[[i]]$name        %<>% rm_repeated
-            obj$x$data[[i]]$legendgroup %<>% rm_repeated
+            obj$x$data[[i]]$name        %<>% rm_repeated()
+            obj$x$data[[i]]$legendgroup %<>% rm_repeated()
         }
+    }
+    # Remove repeated text in legend labels and legend group names
+    if (rm_rep_text == TRUE) {
+        # Function to correct text in labels: extract relevant nonrepeated information
+        rm_repeated <- function(TXT)
+            gsub("\\((.+?)(?:,\\1)+\\)", "\\1", TXT, perl = T)
 
+        # Apply the function
+        for (i in 1:LEN) {
+            obj$x$data[[i]]$name        %<>% rm_repeated()
+            obj$x$data[[i]]$legendgroup %<>% rm_repeated()
+        }
+    }
+    # Remove repeated text in legend labels and legend group names
+    if (rm_nonfirst_gr == TRUE) {
+        # Function to correct text in labels: extract relevant nonrepeated information
+        rm_non_first_groups <- function(TXT)
+            gsub("\\((.*?),.*\\)", "\\1", TXT, perl = T)
+
+        # Apply the function
+        for (i in 1:LEN) {
+            obj$x$data[[i]]$name        %<>% rm_non_first_groups()
+            obj$x$data[[i]]$legendgroup %<>% rm_non_first_groups()
+        }
     }
 
     # # Recover missing label
