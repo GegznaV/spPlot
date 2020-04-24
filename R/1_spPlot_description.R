@@ -9,7 +9,6 @@
 #'
 #' @author Vilmantas Gegzna
 #' @import plotly
-#' @import spHelper
 #' @import magrittr
 #' @import hyperSpec
 #' @importFrom methods validObject
