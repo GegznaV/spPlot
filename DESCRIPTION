@@ -11,45 +11,44 @@ Maintainer: Vilmantas Gegzna <GegeznaV@gmail.com>
 License: GPL (>= 3)
 LazyData: yes
 LazyLoad: yes
-RoxygenNote: 7.0.2.9000
+RoxygenNote: 7.1.0
 VignetteBuilder: knitr
 Remotes:
-    github::GegznaV/spHelper
+  GegznaV/spMisc
 Depends:
     R (>= 3.2),
     ggplot2,
     hyperSpec,
     magrittr
 Imports:
-    methods,
-    spHelper,
-    spMisc,
-    plotly (>= 4.0),
-    ChemometricsWithR,
-    MASS,
-    RColorBrewer,
     chemometrics,
+    ChemometricsWithR,
     compositions,
     cowplot,
     devtools,
     dplyr,
     ggspectra,
     glue,
-    grDevices,
     graphics,
+    grDevices,
     htmltools,
     lubridate,
+    MASS,
+    methods,
     pander,
     photobiology,
     photobiologyWavebands,
     pkgmaker,
+    plotly (>= 4.0),
     prospectr,
     psych,
+    RColorBrewer,
     resemble,
     reshape2,
     rstudioapi,
     scales,
     simsalapar,
+    spMisc,
     tidyr
 Suggests:
     knitr,
